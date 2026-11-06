@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Decision log
+    url: https://app.notion.com/p/40ceb557728b8163be19fb3472bd19a0
+    about: Decisions about rules and structure are recorded in Notion, not in issues.

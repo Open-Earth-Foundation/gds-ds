@@ -1,0 +1,55 @@
+.scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+.root {
+  width: 100%;
+  border-collapse: collapse;
+  font: var(--gds-table-cell-type);
+  letter-spacing: var(--gds-table-cell-type-letter-spacing);
+  color: var(--gds-color-text-primary);
+}
+.head {
+  background: var(--gds-table-header-bg);
+}
+.headerCell {
+  padding: var(--gds-table-cell-padding-y) var(--gds-table-cell-padding-x);
+  text-align: left;
+  font: var(--gds-table-header-type);
+  letter-spacing: var(--gds-table-header-type-letter-spacing);
+  color: var(--gds-table-header-fg);
+  border-bottom: var(--gds-border-default) solid var(--gds-color-border-default);
+  white-space: nowrap;
+}
+.row {
+  background: var(--gds-table-row-bg);
+  border-bottom: var(--gds-border-default) solid var(--gds-table-row-border);
+  transition: background var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.root[data-striped] .body .row:nth-child(even) {
+  background: var(--gds-table-row-striped-bg);
+}
+.body .row:hover {
+  background: var(--gds-table-row-hover-bg);
+}
+.body .row[data-selected] {
+  background: var(--gds-table-row-selected-bg);
+}
+.cell {
+  padding: var(--gds-table-cell-padding-y) var(--gds-table-cell-padding-x);
+  vertical-align: top;
+}
+.cell[data-numeric],
+.headerCell[data-numeric] {
+  text-align: right;
+  font: var(--gds-table-cell-numeric-type);
+  font-variant-numeric: tabular-nums;
+}
+.headerCell[data-numeric] {
+  font: var(--gds-table-header-type);
+}
+.empty {
+  padding: var(--gds-space-inset-xl) var(--gds-table-cell-padding-x);
+  text-align: center;
+  color: var(--gds-table-empty-fg);
+}

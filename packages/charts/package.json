@@ -1,0 +1,45 @@
+{
+  "name": "@oef/gds-charts",
+  "version": "0.1.0",
+  "description": "GDS chart theme for Highcharts, built from the chart.* tokens, with the helpers modules share.",
+  "license": "MIT",
+  "author": "Carlos Graffi <carlos.graffi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Open-Earth-Foundation/gds-ds.git",
+    "directory": "packages/charts"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "echo skip",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "highcharts": ">=11"
+  },
+  "peerDependenciesMeta": {
+    "highcharts": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@oef/gds-tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

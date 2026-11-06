@@ -1,0 +1,35 @@
+{
+  "name": "gds-ds",
+  "private": true,
+  "version": "0.0.0",
+  "description": "GDS: the design system for the GCoM Digital Service. Tokens, React components on Base UI, chart theme.",
+  "license": "MIT",
+  "author": "Carlos Graffi <carlos.graffi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Open-Earth-Foundation/gds-ds.git"
+  },
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "check": "pnpm --filter @oef/gds-tokens check",
+    "build": "pnpm -r --workspace-concurrency=1 build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "storybook": "pnpm --filter @oef/gds-react storybook",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish",
+    "verify": "pnpm check && pnpm build && pnpm lint && pnpm typecheck && pnpm test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3",
+    "prettier": "^3.6.2"
+  }
+}

@@ -1,0 +1,54 @@
+.root {
+  display: grid;
+  gap: var(--gds-space-gap-md);
+}
+.list {
+  position: relative;
+  display: flex;
+  gap: var(--gds-space-gap-md);
+  border-bottom: var(--gds-border-default) solid var(--gds-tabs-border);
+}
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gds-space-gap-xs);
+  padding: var(--gds-space-inset-sm) 0;
+  border: 0;
+  background: none;
+  font: var(--gds-tabs-type);
+  letter-spacing: var(--gds-tabs-type-letter-spacing);
+  color: var(--gds-tabs-fg);
+  cursor: pointer;
+  transition: color var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.tab:hover {
+  color: var(--gds-tabs-fg-active);
+}
+.tab[data-active] {
+  color: var(--gds-tabs-fg-active);
+}
+.tab[data-disabled] {
+  color: var(--gds-color-text-disabled);
+  cursor: not-allowed;
+}
+.count {
+  font: var(--gds-type-code-md);
+  font-size: var(--gds-type-text-xs-font-size);
+  color: var(--gds-color-text-tertiary);
+}
+/* Base UI positions the indicator with --active-tab-left / --active-tab-width. */
+.indicator {
+  position: absolute;
+  bottom: calc(var(--gds-border-default) * -1);
+  left: var(--active-tab-left);
+  width: var(--active-tab-width);
+  height: var(--gds-border-focus);
+  background: var(--gds-tabs-indicator);
+  border-radius: var(--gds-radius-1) var(--gds-radius-1) 0 0;
+  transition:
+    left var(--gds-motion-duration-move) var(--gds-motion-easing-standard),
+    width var(--gds-motion-duration-move) var(--gds-motion-easing-standard);
+}
+.panel {
+  outline: none;
+}

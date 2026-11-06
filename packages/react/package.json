@@ -1,0 +1,67 @@
+{
+  "name": "@oef/gds-react",
+  "version": "0.1.0",
+  "description": "GDS React components: Base UI behavior, CSS Modules on GDS tokens.",
+  "license": "MIT",
+  "author": "Carlos Graffi <carlos.graffi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Open-Earth-Foundation/gds-ds.git",
+    "directory": "packages/react"
+  },
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/gds-react.css"
+  },
+  "scripts": {
+    "build": "vite build",
+    "lint": "stylelint \"src/**/*.css\" && eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.9.0",
+    "@oef/gds-tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@oef/stylelint-plugin-gds": "workspace:*",
+    "@storybook/react-vite": "^10.6.6",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.2.1",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "jsdom": "^31.0.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "storybook": "^10.6.6",
+    "stylelint": "^18.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.6",
+    "vite-plugin-dts": "^5.1.2",
+    "vitest": "^5.1.0"
+  }
+}

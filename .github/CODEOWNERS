@@ -1,0 +1,6 @@
+# Reviews route to the owners below. Tokens are the contract; changes there always get design review.
+*                         @carlosgraffi
+/packages/tokens/         @carlosgraffi
+/packages/react/          @carlosgraffi
+/packages/charts/         @carlosgraffi
+/tools/                   @carlosgraffi

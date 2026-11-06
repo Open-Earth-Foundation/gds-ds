@@ -1,0 +1,76 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gds-space-gap-xs);
+  height: var(--gds-size-icon-lg);
+  padding: 0 var(--gds-badge-padding-x);
+  border-radius: var(--gds-badge-radius);
+  font: var(--gds-badge-type);
+  letter-spacing: var(--gds-badge-type-letter-spacing);
+  line-height: 1;
+  white-space: nowrap;
+}
+.dot {
+  width: calc(var(--gds-size-icon-sm) / 2);
+  height: calc(var(--gds-size-icon-sm) / 2);
+  border-radius: var(--gds-radius-pill);
+  background: currentColor;
+}
+.label {
+  display: inline-block;
+}
+
+.root[data-kind='good'] {
+  background: var(--gds-badge-good-bg);
+  color: var(--gds-badge-good-fg);
+}
+.root[data-kind='warning'] {
+  background: var(--gds-badge-warning-bg);
+  color: var(--gds-badge-warning-fg);
+}
+.root[data-kind='critical'] {
+  background: var(--gds-badge-critical-bg);
+  color: var(--gds-badge-critical-fg);
+}
+.root[data-kind='info'] {
+  background: var(--gds-badge-info-bg);
+  color: var(--gds-badge-info-fg);
+}
+.root[data-kind='neutral'] {
+  background: var(--gds-badge-neutral-bg);
+  color: var(--gds-badge-neutral-fg);
+}
+.root[data-kind='ai'] {
+  background: var(--gds-ai-marker-bg);
+  color: var(--gds-ai-marker-fg);
+  border: var(--gds-border-default) solid var(--gds-ai-marker-border);
+}
+.root[data-kind='ai'] .dot {
+  background: var(--gds-ai-marker-icon);
+}
+
+.root[data-variant='solid'] {
+  color: var(--gds-color-text-inverse);
+}
+.root[data-variant='solid'] .dot {
+  background: var(--gds-color-text-inverse);
+}
+.root[data-variant='solid'][data-kind='good'] {
+  background: var(--gds-color-status-good-solid);
+}
+.root[data-variant='solid'][data-kind='warning'] {
+  background: var(--gds-color-status-warning-solid);
+}
+.root[data-variant='solid'][data-kind='critical'] {
+  background: var(--gds-color-status-critical-solid);
+}
+.root[data-variant='solid'][data-kind='info'] {
+  background: var(--gds-color-status-info-solid);
+}
+.root[data-variant='solid'][data-kind='neutral'] {
+  background: var(--gds-color-status-neutral-solid);
+}
+.root[data-variant='solid'][data-kind='ai'] {
+  background: var(--gds-ai-marker-icon);
+  border-color: transparent;
+}

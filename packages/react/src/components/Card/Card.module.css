@@ -1,0 +1,45 @@
+.root {
+  display: grid;
+  gap: var(--gds-space-gap-md);
+  padding: var(--gds-card-padding);
+  border: var(--gds-border-default) solid var(--gds-card-border);
+  border-radius: var(--gds-card-radius);
+  background: var(--gds-card-bg);
+}
+.root[data-elevated] {
+  box-shadow: var(--gds-card-elevation);
+}
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gds-space-gap-md);
+}
+.eyebrow {
+  margin: 0 0 var(--gds-space-gap-xs);
+  font: var(--gds-type-label-overline);
+  letter-spacing: var(--gds-type-label-overline-letter-spacing);
+  text-transform: uppercase;
+  color: var(--gds-color-text-secondary);
+}
+.title {
+  margin: 0;
+  font: var(--gds-card-title-type);
+  letter-spacing: var(--gds-card-title-type-letter-spacing);
+  color: var(--gds-color-text-primary);
+}
+.actions {
+  display: flex;
+  gap: var(--gds-space-gap-xs);
+  flex: none;
+}
+.body {
+  min-width: 0;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--gds-space-gap-sm);
+  padding-top: var(--gds-space-inset-md);
+  border-top: var(--gds-border-default) solid var(--gds-color-border-subtle);
+}

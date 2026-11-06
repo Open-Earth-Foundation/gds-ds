@@ -1,0 +1,163 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/tokens.json",
+  "$description": "GDS tier 2 color roles, light mode. Same paths as color.dark. References tier 1 only. Every role is a ladder; no role has a single value.",
+  "color": {
+    "$type": "color",
+    "surface": {
+      "base": { "$value": "{color.neutral.light.1}", "$description": "App background" },
+      "subtle": {
+        "$value": "{color.neutral.light.2}",
+        "$description": "Table stripes, sidebars, secondary panels"
+      },
+      "muted": {
+        "$value": "{color.neutral.light.3}",
+        "$description": "Input backgrounds, disabled surfaces, code"
+      },
+      "emphasized": {
+        "$value": "{color.neutral.light.4}",
+        "$description": "Selected rows, active nav item"
+      },
+      "inverse": { "$value": "{color.neutral.light.12}", "$description": "Tooltips, dark banners" },
+      "overlay": {
+        "$value": "{color.alpha.black.40}",
+        "$description": "Scrim behind dialogs and drawers"
+      }
+    },
+    "text": {
+      "primary": { "$value": "{color.neutral.light.12}" },
+      "secondary": {
+        "$value": "{color.neutral.light.11}",
+        "$description": "Descriptions, helper text. AA at body size."
+      },
+      "tertiary": {
+        "$value": "{color.neutral.light.10}",
+        "$description": "Placeholders, timestamps. AA only at 24px or 19px bold; never for essential text."
+      },
+      "disabled": { "$value": "{color.neutral.light.8}" },
+      "inverse": {
+        "$value": "{color.neutral.light.1}",
+        "$description": "Text on surface.inverse and on solid fills"
+      },
+      "link": { "$value": "{color.blue.light.11}" }
+    },
+    "icon": {
+      "primary": { "$value": "{color.neutral.light.12}" },
+      "secondary": { "$value": "{color.neutral.light.11}" },
+      "disabled": { "$value": "{color.neutral.light.8}" },
+      "inverse": { "$value": "{color.neutral.light.1}" }
+    },
+    "border": {
+      "subtle": { "$value": "{color.neutral.light.6}", "$description": "Dividers, table rules" },
+      "default": { "$value": "{color.neutral.light.7}", "$description": "Cards, inputs at rest" },
+      "strong": {
+        "$value": "{color.neutral.light.8}",
+        "$description": "Inputs on hover, emphasized outlines"
+      },
+      "focus": {
+        "$value": "{color.blue.light.9}",
+        "$description": "Focus ring. Functional, stays visible whatever the brand."
+      }
+    },
+    "interactive": {
+      "$description": "Primary actions. Placeholder maps to neutral; the brand accent replaces it.",
+      "default": { "$value": "{color.neutral.light.12}" },
+      "hover": { "$value": "{color.neutral.light.11}" },
+      "active": { "$value": "{color.neutral.light.10}" },
+      "disabled": { "$value": "{color.neutral.light.6}" },
+      "fg": {
+        "$value": "{color.neutral.light.1}",
+        "$description": "Text and icon on the primary fill"
+      },
+      "subtle": {
+        "$description": "Secondary and tertiary controls.",
+        "default": { "$value": "{color.neutral.light.3}" },
+        "hover": { "$value": "{color.neutral.light.4}" },
+        "active": { "$value": "{color.neutral.light.5}" },
+        "fg": { "$value": "{color.neutral.light.12}" }
+      },
+      "selected": {
+        "$description": "Checked, selected, current.",
+        "bg": { "$value": "{color.neutral.light.12}" },
+        "fg": { "$value": "{color.neutral.light.1}" },
+        "subtle-bg": { "$value": "{color.blue.light.3}" },
+        "subtle-fg": { "$value": "{color.blue.light.11}" }
+      }
+    },
+    "status": {
+      "$description": "Each status has bg (soft background), border, fg (text and icon on bg), solid (filled badge or bar).",
+      "good": {
+        "bg": { "$value": "{color.green.light.3}" },
+        "border": { "$value": "{color.green.light.7}" },
+        "fg": { "$value": "{color.green.light.11}" },
+        "solid": { "$value": "{color.green.light.9}" }
+      },
+      "warning": {
+        "bg": { "$value": "{color.amber.light.3}" },
+        "border": { "$value": "{color.amber.light.7}" },
+        "fg": { "$value": "{color.amber.light.11}" },
+        "solid": { "$value": "{color.amber.light.9}" }
+      },
+      "critical": {
+        "bg": { "$value": "{color.red.light.3}" },
+        "border": { "$value": "{color.red.light.7}" },
+        "fg": { "$value": "{color.red.light.11}" },
+        "solid": { "$value": "{color.red.light.9}" }
+      },
+      "info": {
+        "bg": { "$value": "{color.blue.light.3}" },
+        "border": { "$value": "{color.blue.light.7}" },
+        "fg": { "$value": "{color.blue.light.11}" },
+        "solid": { "$value": "{color.blue.light.9}" }
+      },
+      "neutral": {
+        "$description": "Pending, not estimated, not applicable.",
+        "bg": { "$value": "{color.neutral.light.3}" },
+        "border": { "$value": "{color.neutral.light.7}" },
+        "fg": { "$value": "{color.neutral.light.11}" },
+        "solid": { "$value": "{color.neutral.light.9}" }
+      }
+    },
+    "data": {
+      "categorical": {
+        "1": { "$value": "{color.categorical.1}" },
+        "2": { "$value": "{color.categorical.2}" },
+        "3": { "$value": "{color.categorical.3}" },
+        "4": { "$value": "{color.categorical.4}" },
+        "5": { "$value": "{color.categorical.5}" },
+        "6": { "$value": "{color.categorical.6}" },
+        "7": { "$value": "{color.categorical.7}" },
+        "8": { "$value": "{color.categorical.8}" }
+      },
+      "sequential": {
+        "1": { "$value": "{color.sequential.1}" },
+        "2": { "$value": "{color.sequential.2}" },
+        "3": { "$value": "{color.sequential.3}" },
+        "4": { "$value": "{color.sequential.4}" },
+        "5": { "$value": "{color.sequential.5}" }
+      },
+      "diverging": {
+        "negative": { "$value": "{color.diverging.negative}" },
+        "neutral": { "$value": "{color.diverging.neutral}" },
+        "positive": { "$value": "{color.diverging.positive}" }
+      },
+      "reference": {
+        "$value": "{color.neutral.light.9}",
+        "$description": "Target lines, baselines, annotations"
+      },
+      "axis": { "$value": "{color.neutral.light.8}" },
+      "grid": { "$value": "{color.neutral.light.6}" },
+      "label": { "$value": "{color.neutral.light.11}" },
+      "estimated": {
+        "$value": "{color.neutral.light.7}",
+        "$description": "Hatched or dimmed fill for estimated values"
+      }
+    },
+    "ai": {
+      "$description": "AI-marked content. Principle 12: anything an AI produced or revised is marked. One shared treatment, no module invents its own.",
+      "bg": { "$value": "{color.blue.light.2}" },
+      "border": { "$value": "{color.blue.light.6}" },
+      "fg": { "$value": "{color.blue.light.11}" },
+      "marker": { "$value": "{color.blue.light.9}" }
+    }
+  }
+}

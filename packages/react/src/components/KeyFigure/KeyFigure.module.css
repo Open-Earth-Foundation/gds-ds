@@ -1,0 +1,39 @@
+.root {
+  display: grid;
+  gap: var(--gds-space-gap-xs);
+}
+.label {
+  margin: 0;
+  font: var(--gds-key-figure-label-type);
+  letter-spacing: var(--gds-key-figure-label-type-letter-spacing);
+  text-transform: uppercase;
+  color: var(--gds-key-figure-label-fg);
+}
+.value {
+  margin: 0;
+  font: var(--gds-key-figure-value-type);
+  letter-spacing: var(--gds-key-figure-value-type-letter-spacing);
+  font-variant-numeric: tabular-nums;
+  color: var(--gds-color-text-primary);
+}
+.unit {
+  font: var(--gds-type-text-md);
+  color: var(--gds-color-text-secondary);
+}
+.delta {
+  margin: 0;
+  font: var(--gds-type-numeric-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--gds-color-text-secondary);
+}
+.delta[data-tone='good'] {
+  color: var(--gds-key-figure-delta-good);
+}
+.delta[data-tone='bad'] {
+  color: var(--gds-key-figure-delta-bad);
+}
+.provenance {
+  margin: 0;
+  font: var(--gds-provenance-type);
+  color: var(--gds-provenance-fg);
+}

@@ -1,0 +1,17 @@
+name: Bug
+description: Something renders or behaves wrong.
+labels: [bug]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Component or token
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens, what should happen
+      description: Steps, browser, theme (light or dark), and a screenshot.
+    validations:
+      required: true

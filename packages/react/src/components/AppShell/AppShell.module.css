@@ -1,0 +1,180 @@
+.root {
+  display: grid;
+  grid-template-columns: var(--gds-nav-sidebar-width) minmax(0, 1fr);
+  grid-template-rows: var(--gds-nav-topbar-height) minmax(0, 1fr);
+  min-height: 100%;
+  background: var(--gds-color-surface-base);
+  color: var(--gds-color-text-primary);
+}
+.topBar {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: var(--gds-space-gap-md);
+  padding: 0 var(--gds-space-inset-lg);
+  background: var(--gds-nav-bg);
+  border-bottom: var(--gds-border-default) solid var(--gds-nav-border);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--gds-space-gap-sm);
+  font: var(--gds-type-display-xs);
+  letter-spacing: var(--gds-type-display-xs-letter-spacing);
+}
+.switcher {
+  display: flex;
+}
+.spacer {
+  flex: 1;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--gds-space-gap-xs);
+}
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gds-space-gap-xs);
+  padding: var(--gds-space-inset-md);
+  background: var(--gds-nav-bg);
+  border-right: var(--gds-border-default) solid var(--gds-nav-border);
+  overflow-y: auto;
+}
+.navGroup {
+  margin: var(--gds-space-inset-md) 0 var(--gds-space-inset-xs);
+  padding: 0 var(--gds-space-inset-sm);
+  font: var(--gds-type-label-overline);
+  letter-spacing: var(--gds-type-label-overline-letter-spacing);
+  text-transform: uppercase;
+  color: var(--gds-color-text-tertiary);
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--gds-space-gap-sm);
+  height: var(--gds-size-control-sm);
+  padding: 0 var(--gds-space-inset-sm);
+  border-radius: var(--gds-radius-control);
+  font: var(--gds-nav-item-type);
+  letter-spacing: var(--gds-nav-item-type-letter-spacing);
+  color: var(--gds-nav-item-fg);
+  text-decoration: none;
+  transition: background var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.navItem:hover {
+  background: var(--gds-nav-item-bg-hover);
+  color: var(--gds-nav-item-fg-hover);
+}
+.navItem[data-current] {
+  background: var(--gds-nav-item-bg-current);
+  color: var(--gds-nav-item-fg-current);
+}
+.navIcon {
+  display: inline-flex;
+  width: var(--gds-size-icon-sm);
+  height: var(--gds-size-icon-sm);
+  flex: none;
+}
+.navIcon > :global(svg) {
+  width: 100%;
+  height: 100%;
+}
+.navLabel {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.navStep {
+  font: var(--gds-type-code-md);
+  font-size: var(--gds-type-text-xs-font-size);
+  color: var(--gds-color-text-tertiary);
+}
+.main {
+  display: grid;
+  align-content: start;
+  gap: var(--gds-space-gap-md);
+  padding: var(--gds-space-inset-lg) var(--gds-space-inset-xl);
+  max-width: var(--gds-size-layout-content-max);
+  width: 100%;
+  overflow: auto;
+}
+.breadcrumb {
+  font: var(--gds-type-text-sm);
+  color: var(--gds-color-text-secondary);
+}
+.breadcrumbList {
+  display: flex;
+  gap: var(--gds-space-gap-xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.breadcrumbItem + .breadcrumbItem::before {
+  content: '/';
+  margin-right: var(--gds-space-gap-xs);
+  color: var(--gds-color-text-tertiary);
+}
+.breadcrumbItem[aria-current] {
+  color: var(--gds-color-text-primary);
+}
+.breadcrumbItem > :global(a) {
+  color: inherit;
+}
+.pageHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gds-space-gap-md);
+}
+.pageTitle {
+  margin: 0;
+  font: var(--gds-type-display-lg);
+  letter-spacing: var(--gds-type-display-lg-letter-spacing);
+}
+.pageSubtitle {
+  margin: var(--gds-space-gap-xs) 0 0;
+  font: var(--gds-type-text-md);
+  color: var(--gds-color-text-secondary);
+}
+.pageActions {
+  display: flex;
+  gap: var(--gds-space-gap-sm);
+  flex: none;
+}
+.empty {
+  display: grid;
+  justify-items: center;
+  gap: var(--gds-space-gap-xs);
+  padding: var(--gds-space-section) var(--gds-space-inset-xl);
+  border: var(--gds-border-default) dashed var(--gds-color-border-default);
+  border-radius: var(--gds-radius-container);
+  text-align: center;
+  color: var(--gds-color-text-secondary);
+}
+.emptyTitle {
+  margin: 0;
+  font: var(--gds-type-label-md);
+  color: var(--gds-color-text-primary);
+}
+.emptyText {
+  max-width: var(--gds-size-reading-width);
+}
+.emptyText > :global(p) {
+  margin: 0;
+}
+
+@media (max-width: 48rem) {
+  .root {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .sideNav {
+    display: none;
+  }
+  .main {
+    padding: var(--gds-space-inset-md);
+  }
+}

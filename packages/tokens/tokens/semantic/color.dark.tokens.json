@@ -1,0 +1,121 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/tokens.json",
+  "$description": "GDS tier 2 color roles, dark mode. Same paths as color.light. References tier 1 only.",
+  "color": {
+    "$type": "color",
+    "surface": {
+      "base": { "$value": "{color.neutral.dark.1}" },
+      "subtle": { "$value": "{color.neutral.dark.2}" },
+      "muted": { "$value": "{color.neutral.dark.3}" },
+      "emphasized": { "$value": "{color.neutral.dark.4}" },
+      "inverse": { "$value": "{color.neutral.dark.12}" },
+      "overlay": { "$value": "{color.alpha.black.60}" }
+    },
+    "text": {
+      "primary": { "$value": "{color.neutral.dark.12}" },
+      "secondary": { "$value": "{color.neutral.dark.11}" },
+      "tertiary": { "$value": "{color.neutral.dark.10}" },
+      "disabled": { "$value": "{color.neutral.dark.8}" },
+      "inverse": { "$value": "{color.neutral.dark.1}" },
+      "link": { "$value": "{color.blue.dark.11}" }
+    },
+    "icon": {
+      "primary": { "$value": "{color.neutral.dark.12}" },
+      "secondary": { "$value": "{color.neutral.dark.11}" },
+      "disabled": { "$value": "{color.neutral.dark.8}" },
+      "inverse": { "$value": "{color.neutral.dark.1}" }
+    },
+    "border": {
+      "subtle": { "$value": "{color.neutral.dark.6}" },
+      "default": { "$value": "{color.neutral.dark.7}" },
+      "strong": { "$value": "{color.neutral.dark.8}" },
+      "focus": { "$value": "{color.blue.dark.9}" }
+    },
+    "interactive": {
+      "default": { "$value": "{color.neutral.dark.12}" },
+      "hover": { "$value": "{color.neutral.dark.11}" },
+      "active": { "$value": "{color.neutral.dark.10}" },
+      "disabled": { "$value": "{color.neutral.dark.6}" },
+      "fg": { "$value": "{color.neutral.dark.1}" },
+      "subtle": {
+        "default": { "$value": "{color.neutral.dark.3}" },
+        "hover": { "$value": "{color.neutral.dark.4}" },
+        "active": { "$value": "{color.neutral.dark.5}" },
+        "fg": { "$value": "{color.neutral.dark.12}" }
+      },
+      "selected": {
+        "bg": { "$value": "{color.neutral.dark.12}" },
+        "fg": { "$value": "{color.neutral.dark.1}" },
+        "subtle-bg": { "$value": "{color.blue.dark.3}" },
+        "subtle-fg": { "$value": "{color.blue.dark.11}" }
+      }
+    },
+    "status": {
+      "good": {
+        "bg": { "$value": "{color.green.dark.3}" },
+        "border": { "$value": "{color.green.dark.7}" },
+        "fg": { "$value": "{color.green.dark.11}" },
+        "solid": { "$value": "{color.green.dark.9}" }
+      },
+      "warning": {
+        "bg": { "$value": "{color.amber.dark.3}" },
+        "border": { "$value": "{color.amber.dark.7}" },
+        "fg": { "$value": "{color.amber.dark.11}" },
+        "solid": { "$value": "{color.amber.dark.9}" }
+      },
+      "critical": {
+        "bg": { "$value": "{color.red.dark.3}" },
+        "border": { "$value": "{color.red.dark.7}" },
+        "fg": { "$value": "{color.red.dark.11}" },
+        "solid": { "$value": "{color.red.dark.9}" }
+      },
+      "info": {
+        "bg": { "$value": "{color.blue.dark.3}" },
+        "border": { "$value": "{color.blue.dark.7}" },
+        "fg": { "$value": "{color.blue.dark.11}" },
+        "solid": { "$value": "{color.blue.dark.9}" }
+      },
+      "neutral": {
+        "bg": { "$value": "{color.neutral.dark.3}" },
+        "border": { "$value": "{color.neutral.dark.7}" },
+        "fg": { "$value": "{color.neutral.dark.11}" },
+        "solid": { "$value": "{color.neutral.dark.9}" }
+      }
+    },
+    "data": {
+      "categorical": {
+        "1": { "$value": "{color.categorical.1}" },
+        "2": { "$value": "{color.categorical.2}" },
+        "3": { "$value": "{color.categorical.3}" },
+        "4": { "$value": "{color.categorical.4}" },
+        "5": { "$value": "{color.categorical.5}" },
+        "6": { "$value": "{color.categorical.6}" },
+        "7": { "$value": "{color.categorical.7}" },
+        "8": { "$value": "{color.categorical.8}" }
+      },
+      "sequential": {
+        "1": { "$value": "{color.sequential.1}" },
+        "2": { "$value": "{color.sequential.2}" },
+        "3": { "$value": "{color.sequential.3}" },
+        "4": { "$value": "{color.sequential.4}" },
+        "5": { "$value": "{color.sequential.5}" }
+      },
+      "diverging": {
+        "negative": { "$value": "{color.diverging.negative}" },
+        "neutral": { "$value": "{color.diverging.neutral}" },
+        "positive": { "$value": "{color.diverging.positive}" }
+      },
+      "reference": { "$value": "{color.neutral.dark.9}" },
+      "axis": { "$value": "{color.neutral.dark.8}" },
+      "grid": { "$value": "{color.neutral.dark.6}" },
+      "label": { "$value": "{color.neutral.dark.11}" },
+      "estimated": { "$value": "{color.neutral.dark.7}" }
+    },
+    "ai": {
+      "bg": { "$value": "{color.blue.dark.2}" },
+      "border": { "$value": "{color.blue.dark.6}" },
+      "fg": { "$value": "{color.blue.dark.11}" },
+      "marker": { "$value": "{color.blue.dark.9}" }
+    }
+  }
+}

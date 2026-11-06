@@ -1,0 +1,236 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/tokens.json",
+  "$description": "GDS tier 3: component aliases. References tier 2 only; never a value. A representative set for the v0.1 kit. Add aliases freely; add roles in semantic/ with a reason.",
+  "button": {
+    "primary": {
+      "bg": { "$type": "color", "$value": "{color.interactive.default}" },
+      "bg-hover": { "$type": "color", "$value": "{color.interactive.hover}" },
+      "bg-active": { "$type": "color", "$value": "{color.interactive.active}" },
+      "bg-disabled": { "$type": "color", "$value": "{color.interactive.disabled}" },
+      "fg": { "$type": "color", "$value": "{color.interactive.fg}" }
+    },
+    "secondary": {
+      "bg": { "$type": "color", "$value": "{color.interactive.subtle.default}" },
+      "bg-hover": { "$type": "color", "$value": "{color.interactive.subtle.hover}" },
+      "bg-active": { "$type": "color", "$value": "{color.interactive.subtle.active}" },
+      "fg": { "$type": "color", "$value": "{color.interactive.subtle.fg}" },
+      "border": { "$type": "color", "$value": "{color.border.default}" }
+    },
+    "destructive": {
+      "bg": { "$type": "color", "$value": "{color.status.critical.solid}" },
+      "fg": { "$type": "color", "$value": "{color.text.inverse}" }
+    },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.pill}",
+      "$description": "Buttons are pills; inputs keep radius.control"
+    },
+    "height": {
+      "sm": { "$type": "dimension", "$value": "{size.control.sm}" },
+      "md": { "$type": "dimension", "$value": "{size.control.md}" },
+      "lg": { "$type": "dimension", "$value": "{size.control.lg}" }
+    },
+    "padding-x": { "$type": "dimension", "$value": "{space.inset.md}" },
+    "type": { "$type": "typography", "$value": "{type.label.md}" }
+  },
+  "input": {
+    "bg": { "$type": "color", "$value": "{color.surface.base}" },
+    "bg-disabled": { "$type": "color", "$value": "{color.surface.muted}" },
+    "fg": { "$type": "color", "$value": "{color.text.primary}" },
+    "placeholder": { "$type": "color", "$value": "{color.text.tertiary}" },
+    "border": { "$type": "color", "$value": "{color.border.default}" },
+    "border-hover": { "$type": "color", "$value": "{color.border.strong}" },
+    "border-focus": { "$type": "color", "$value": "{color.border.focus}" },
+    "border-invalid": { "$type": "color", "$value": "{color.status.critical.border}" },
+    "help-fg": { "$type": "color", "$value": "{color.text.secondary}" },
+    "error-fg": { "$type": "color", "$value": "{color.status.critical.fg}" },
+    "radius": {
+      "$type": "dimension",
+      "$value": "{radius.pill}",
+      "$description": "Buttons are pills; inputs keep radius.control"
+    },
+    "height": { "$type": "dimension", "$value": "{size.control.md}" },
+    "padding-x": { "$type": "dimension", "$value": "{space.inset.sm}" },
+    "type": { "$type": "typography", "$value": "{type.text.md}" }
+  },
+  "table": {
+    "header": {
+      "bg": { "$type": "color", "$value": "{color.surface.subtle}" },
+      "fg": { "$type": "color", "$value": "{color.text.secondary}" },
+      "type": { "$type": "typography", "$value": "{type.display.xs}" }
+    },
+    "row": {
+      "bg": { "$type": "color", "$value": "{color.surface.base}" },
+      "striped": { "bg": { "$type": "color", "$value": "{color.surface.subtle}" } },
+      "hover": { "bg": { "$type": "color", "$value": "{color.surface.muted}" } },
+      "selected": { "bg": { "$type": "color", "$value": "{color.surface.emphasized}" } },
+      "border": { "$type": "color", "$value": "{color.border.subtle}" }
+    },
+    "cell": {
+      "padding-x": { "$type": "dimension", "$value": "{space.inset.sm}" },
+      "padding-y": { "$type": "dimension", "$value": "{space.inset.sm}" },
+      "type": { "$type": "typography", "$value": "{type.text.sm}" },
+      "numeric-type": { "$type": "typography", "$value": "{type.numeric.sm}" }
+    },
+    "empty": {
+      "fg": { "$type": "color", "$value": "{color.text.tertiary}" },
+      "$description": "Principle 10: absence of data is data. Empty cells show a state, never a blank."
+    }
+  },
+  "card": {
+    "bg": { "$type": "color", "$value": "{color.surface.base}" },
+    "border": { "$type": "color", "$value": "{color.border.subtle}" },
+    "radius": { "$type": "dimension", "$value": "{radius.container}" },
+    "padding": { "$type": "dimension", "$value": "{space.inset.lg}" },
+    "elevation": { "$type": "shadow", "$value": "{elevation.raised}" },
+    "title-type": { "$type": "typography", "$value": "{type.display.sm}" }
+  },
+  "badge": {
+    "radius": { "$type": "dimension", "$value": "{radius.pill}" },
+    "padding-x": { "$type": "dimension", "$value": "{space.inset.sm}" },
+    "type": { "$type": "typography", "$value": "{type.label.sm}" },
+    "good": {
+      "bg": { "$type": "color", "$value": "{color.status.good.bg}" },
+      "fg": { "$type": "color", "$value": "{color.status.good.fg}" }
+    },
+    "warning": {
+      "bg": { "$type": "color", "$value": "{color.status.warning.bg}" },
+      "fg": { "$type": "color", "$value": "{color.status.warning.fg}" }
+    },
+    "critical": {
+      "bg": { "$type": "color", "$value": "{color.status.critical.bg}" },
+      "fg": { "$type": "color", "$value": "{color.status.critical.fg}" }
+    },
+    "info": {
+      "bg": { "$type": "color", "$value": "{color.status.info.bg}" },
+      "fg": { "$type": "color", "$value": "{color.status.info.fg}" }
+    },
+    "neutral": {
+      "bg": { "$type": "color", "$value": "{color.status.neutral.bg}" },
+      "fg": { "$type": "color", "$value": "{color.status.neutral.fg}" }
+    }
+  },
+  "alert": {
+    "radius": { "$type": "dimension", "$value": "{radius.container}" },
+    "padding": { "$type": "dimension", "$value": "{space.inset.md}" },
+    "info": {
+      "bg": { "$type": "color", "$value": "{color.status.info.bg}" },
+      "border": { "$type": "color", "$value": "{color.status.info.border}" },
+      "fg": { "$type": "color", "$value": "{color.status.info.fg}" }
+    },
+    "good": {
+      "bg": { "$type": "color", "$value": "{color.status.good.bg}" },
+      "border": { "$type": "color", "$value": "{color.status.good.border}" },
+      "fg": { "$type": "color", "$value": "{color.status.good.fg}" }
+    },
+    "warning": {
+      "bg": { "$type": "color", "$value": "{color.status.warning.bg}" },
+      "border": { "$type": "color", "$value": "{color.status.warning.border}" },
+      "fg": { "$type": "color", "$value": "{color.status.warning.fg}" }
+    },
+    "critical": {
+      "bg": { "$type": "color", "$value": "{color.status.critical.bg}" },
+      "border": { "$type": "color", "$value": "{color.status.critical.border}" },
+      "fg": { "$type": "color", "$value": "{color.status.critical.fg}" }
+    }
+  },
+  "tooltip": {
+    "bg": { "$type": "color", "$value": "{color.surface.inverse}" },
+    "fg": { "$type": "color", "$value": "{color.text.inverse}" },
+    "radius": { "$type": "dimension", "$value": "{radius.control}" },
+    "padding-x": { "$type": "dimension", "$value": "{space.inset.sm}" },
+    "padding-y": { "$type": "dimension", "$value": "{space.inset.xs}" },
+    "type": { "$type": "typography", "$value": "{type.text.sm}" }
+  },
+  "popover": {
+    "bg": { "$type": "color", "$value": "{color.surface.base}" },
+    "border": { "$type": "color", "$value": "{color.border.default}" },
+    "radius": { "$type": "dimension", "$value": "{radius.overlay}" },
+    "elevation": { "$type": "shadow", "$value": "{elevation.overlay}" },
+    "padding": { "$type": "dimension", "$value": "{space.inset.sm}" }
+  },
+  "dialog": {
+    "bg": { "$type": "color", "$value": "{color.surface.base}" },
+    "scrim": { "$type": "color", "$value": "{color.surface.overlay}" },
+    "radius": { "$type": "dimension", "$value": "{radius.container}" },
+    "elevation": { "$type": "shadow", "$value": "{elevation.modal}" },
+    "padding": { "$type": "dimension", "$value": "{space.inset.xl}" },
+    "title-type": { "$type": "typography", "$value": "{type.display.md}" },
+    "duration": { "$type": "duration", "$value": "{motion.duration.move}" }
+  },
+  "toast": {
+    "bg": { "$type": "color", "$value": "{color.surface.inverse}" },
+    "fg": { "$type": "color", "$value": "{color.text.inverse}" },
+    "radius": { "$type": "dimension", "$value": "{radius.overlay}" },
+    "elevation": { "$type": "shadow", "$value": "{elevation.overlay}" }
+  },
+  "tabs": {
+    "fg": { "$type": "color", "$value": "{color.text.secondary}" },
+    "fg-active": { "$type": "color", "$value": "{color.text.primary}" },
+    "indicator": { "$type": "color", "$value": "{color.interactive.default}" },
+    "border": { "$type": "color", "$value": "{color.border.subtle}" },
+    "type": { "$type": "typography", "$value": "{type.label.md}" }
+  },
+  "nav": {
+    "$description": "App shell: top bar, side nav, module switcher. Principle 6: owned by the system, not by modules.",
+    "bg": { "$type": "color", "$value": "{color.surface.subtle}" },
+    "border": { "$type": "color", "$value": "{color.border.subtle}" },
+    "item": {
+      "fg": { "$type": "color", "$value": "{color.text.secondary}" },
+      "fg-hover": { "$type": "color", "$value": "{color.text.primary}" },
+      "bg-hover": { "$type": "color", "$value": "{color.surface.muted}" },
+      "bg-current": { "$type": "color", "$value": "{color.surface.emphasized}" },
+      "fg-current": { "$type": "color", "$value": "{color.text.primary}" },
+      "type": { "$type": "typography", "$value": "{type.label.md}" }
+    },
+    "sidebar-width": { "$type": "dimension", "$value": "{size.layout.sidebar}" },
+    "topbar-height": { "$type": "dimension", "$value": "{size.layout.topbar}" }
+  },
+  "provenance": {
+    "$description": "Principle 3: every figure can show its source, who touched it and when.",
+    "fg": { "$type": "color", "$value": "{color.text.tertiary}" },
+    "icon": { "$type": "color", "$value": "{color.icon.secondary}" },
+    "type": { "$type": "typography", "$value": "{type.text.xs}" }
+  },
+  "ai-marker": {
+    "$description": "Principle 12: AI-produced or AI-revised content is marked with this and nothing else.",
+    "bg": { "$type": "color", "$value": "{color.ai.bg}" },
+    "border": { "$type": "color", "$value": "{color.ai.border}" },
+    "fg": { "$type": "color", "$value": "{color.ai.fg}" },
+    "icon": { "$type": "color", "$value": "{color.ai.marker}" },
+    "radius": { "$type": "dimension", "$value": "{radius.control}" }
+  },
+  "key-figure": {
+    "value-type": { "$type": "typography", "$value": "{type.numeric.xl}" },
+    "label-type": { "$type": "typography", "$value": "{type.label.overline}" },
+    "label-fg": { "$type": "color", "$value": "{color.text.secondary}" },
+    "delta-good": { "$type": "color", "$value": "{color.status.good.fg}" },
+    "delta-bad": { "$type": "color", "$value": "{color.status.critical.fg}" }
+  },
+  "chart": {
+    "$description": "Highcharts theme is generated from these.",
+    "axis": { "$type": "color", "$value": "{color.data.axis}" },
+    "grid": { "$type": "color", "$value": "{color.data.grid}" },
+    "label": { "$type": "color", "$value": "{color.data.label}" },
+    "label-type": { "$type": "typography", "$value": "{type.text.xs}" },
+    "reference": { "$type": "color", "$value": "{color.data.reference}" },
+    "estimated": { "$type": "color", "$value": "{color.data.estimated}" },
+    "tooltip-bg": { "$type": "color", "$value": "{color.surface.inverse}" },
+    "tooltip-fg": { "$type": "color", "$value": "{color.text.inverse}" },
+    "series": {
+      "1": { "$type": "color", "$value": "{color.data.categorical.1}" },
+      "2": { "$type": "color", "$value": "{color.data.categorical.2}" },
+      "3": { "$type": "color", "$value": "{color.data.categorical.3}" },
+      "4": { "$type": "color", "$value": "{color.data.categorical.4}" },
+      "5": { "$type": "color", "$value": "{color.data.categorical.5}" },
+      "6": { "$type": "color", "$value": "{color.data.categorical.6}" },
+      "7": { "$type": "color", "$value": "{color.data.categorical.7}" },
+      "8": { "$type": "color", "$value": "{color.data.categorical.8}" }
+    }
+  },
+  "focus-ring": {
+    "color": { "$type": "color", "$value": "{color.border.focus}" },
+    "width": { "$type": "dimension", "$value": "{border.focus}" },
+    "offset": { "$type": "dimension", "$value": "{border.focus}" }
+  }
+}

@@ -1,0 +1,7 @@
+packages:
+  - packages/*
+  - tools/*
+
+# Dependencies allowed to run postinstall scripts (esbuild downloads its binary).
+onlyBuiltDependencies:
+  - esbuild

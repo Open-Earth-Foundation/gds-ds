@@ -1,0 +1,64 @@
+.root {
+  display: grid;
+  gap: var(--gds-space-gap-xs);
+}
+.label {
+  font: var(--gds-type-label-md);
+  color: var(--gds-color-text-primary);
+}
+.required {
+  font: var(--gds-type-text-xs);
+  color: var(--gds-color-text-tertiary);
+}
+.control {
+  display: flex;
+  align-items: center;
+  gap: var(--gds-space-gap-xs);
+  height: var(--gds-input-height);
+  padding: 0 var(--gds-input-padding-x) 0 var(--gds-space-inset-md);
+  border: var(--gds-border-default) solid var(--gds-input-border);
+  border-radius: var(--gds-input-radius);
+  background: var(--gds-input-bg);
+  color: var(--gds-input-fg);
+  transition: border-color var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.control:hover {
+  border-color: var(--gds-input-border-hover);
+}
+.root[data-focused] .control {
+  border-color: var(--gds-input-border-focus);
+}
+.root[data-invalid] .control {
+  border-color: var(--gds-input-border-invalid);
+}
+.root[data-disabled] .control {
+  background: var(--gds-input-bg-disabled);
+  color: var(--gds-color-text-disabled);
+  border-color: var(--gds-color-border-subtle);
+}
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: var(--gds-input-type);
+  letter-spacing: var(--gds-input-type-letter-spacing);
+  outline: none;
+}
+.input::placeholder {
+  color: var(--gds-input-placeholder);
+}
+.suffix {
+  font: var(--gds-type-text-sm);
+  color: var(--gds-color-text-tertiary);
+}
+.help {
+  font: var(--gds-type-text-sm);
+  color: var(--gds-input-help-fg);
+}
+.error {
+  font: var(--gds-type-text-sm);
+  color: var(--gds-input-error-fg);
+}

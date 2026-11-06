@@ -1,0 +1,52 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gds-space-gap-sm);
+  min-height: var(--gds-size-icon-lg);
+  font: var(--gds-type-text-md);
+  cursor: pointer;
+}
+.root:has(.box[data-disabled]) {
+  color: var(--gds-color-text-disabled);
+  cursor: not-allowed;
+}
+.box {
+  display: grid;
+  place-items: center;
+  width: var(--gds-size-icon-md);
+  height: var(--gds-size-icon-md);
+  flex: none;
+  border: var(--gds-border-default) solid var(--gds-color-border-strong);
+  border-radius: var(--gds-radius-control);
+  background: var(--gds-color-surface-base);
+  color: var(--gds-color-interactive-selected-fg);
+  transition:
+    background var(--gds-motion-duration-state) var(--gds-motion-easing-standard),
+    border-color var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.box:hover {
+  border-color: var(--gds-color-interactive-default);
+}
+.box[data-checked],
+.box[data-indeterminate] {
+  background: var(--gds-color-interactive-selected-bg);
+  border-color: var(--gds-color-interactive-selected-bg);
+}
+.box[data-disabled] {
+  background: var(--gds-color-surface-muted);
+  border-color: var(--gds-color-border-subtle);
+  color: var(--gds-color-text-disabled);
+}
+.indicator {
+  display: grid;
+  place-items: center;
+  width: var(--gds-size-icon-sm);
+  height: var(--gds-size-icon-sm);
+}
+.indicator > :global(svg) {
+  width: 100%;
+  height: 100%;
+}
+.text {
+  user-select: none;
+}

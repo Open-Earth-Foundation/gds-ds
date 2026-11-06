@@ -1,0 +1,26 @@
+/* GDS base: the few global rules components rely on. Import once after @oef/gds-tokens/css. */
+
+:where(:root) {
+  font: var(--gds-type-text-md);
+  letter-spacing: var(--gds-type-text-md-letter-spacing);
+  color: var(--gds-color-text-primary);
+  background: var(--gds-color-surface-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+/* One focus ring for everything interactive. */
+:where(:focus-visible) {
+  outline: var(--gds-focus-ring-width) solid var(--gds-focus-ring-color);
+  outline-offset: var(--gds-focus-ring-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :where(*, *::before, *::after) {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}

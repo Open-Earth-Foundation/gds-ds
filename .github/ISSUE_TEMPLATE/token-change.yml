@@ -1,0 +1,30 @@
+name: Token change
+description: Add, rename, re-point or remove a token.
+labels: [tokens]
+body:
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Tier
+      options: [primitive (brand), semantic (role), component (alias)]
+    validations:
+      required: true
+  - type: input
+    id: path
+    attributes:
+      label: Token path
+      placeholder: color.surface.subtle
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+      description: What looks or reads wrong today, and what the change fixes. A screenshot helps.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Who else reads this token
+      description: Component aliases that point at it, and whether they should follow.

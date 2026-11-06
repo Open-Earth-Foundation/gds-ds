@@ -1,0 +1,26 @@
+{
+  "name": "@oef/stylelint-plugin-gds",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stylelint rules that enforce the GDS token rules in component stylesheets: no raw values, only --gds- variables.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.mjs",
+  "exports": "./index.mjs",
+  "scripts": {
+    "test": "vitest run",
+    "lint": "node -e \"import('./index.mjs')\"",
+    "typecheck": "echo skip",
+    "build": "echo skip"
+  },
+  "peerDependencies": {
+    "stylelint": ">=16"
+  },
+  "dependencies": {
+    "postcss-value-parser": "^4.2.0"
+  },
+  "devDependencies": {
+    "stylelint": "^18.0.0",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,47 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gds-space-gap-sm);
+  min-height: var(--gds-size-icon-lg);
+  font: var(--gds-type-text-md);
+  cursor: pointer;
+}
+.root:has(.track[data-disabled]) {
+  color: var(--gds-color-text-disabled);
+  cursor: not-allowed;
+}
+.track {
+  position: relative;
+  display: inline-block;
+  width: calc(var(--gds-size-icon-md) * 2);
+  height: var(--gds-size-icon-md);
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: var(--gds-radius-pill);
+  background: var(--gds-color-border-strong);
+  transition: background var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.track[data-checked] {
+  background: var(--gds-color-interactive-selected-bg);
+}
+.track[data-disabled] {
+  background: var(--gds-color-border-subtle);
+}
+.thumb {
+  position: absolute;
+  top: calc((var(--gds-size-icon-md) - var(--gds-size-icon-sm)) / 2);
+  left: calc((var(--gds-size-icon-md) - var(--gds-size-icon-sm)) / 2);
+  width: var(--gds-size-icon-sm);
+  height: var(--gds-size-icon-sm);
+  border-radius: var(--gds-radius-pill);
+  background: var(--gds-color-surface-base);
+  box-shadow: var(--gds-elevation-raised);
+  transition: translate var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.thumb[data-checked] {
+  translate: var(--gds-size-icon-md) 0;
+}
+.text {
+  user-select: none;
+}

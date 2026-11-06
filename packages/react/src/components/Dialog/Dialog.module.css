@@ -1,0 +1,82 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--gds-z-overlay);
+  background: var(--gds-dialog-scrim);
+  transition: opacity var(--gds-dialog-duration) var(--gds-motion-easing-standard);
+}
+.backdrop[data-starting-style],
+.backdrop[data-ending-style] {
+  opacity: 0;
+}
+.root {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: var(--gds-z-overlay);
+  width: calc(100% - var(--gds-space-inset-lg) * 2);
+  max-width: var(--gds-size-reading-width);
+  max-height: calc(100% - var(--gds-space-inset-lg) * 2);
+  overflow: auto;
+  display: grid;
+  gap: var(--gds-space-gap-md);
+  padding: var(--gds-dialog-padding);
+  border-radius: var(--gds-dialog-radius);
+  background: var(--gds-dialog-bg);
+  color: var(--gds-color-text-primary);
+  box-shadow: var(--gds-dialog-elevation);
+  translate: -50% -50%;
+  transition:
+    opacity var(--gds-dialog-duration) var(--gds-motion-easing-standard),
+    scale var(--gds-dialog-duration) var(--gds-motion-easing-standard);
+}
+.root[data-starting-style],
+.root[data-ending-style] {
+  opacity: 0;
+  scale: 0.97;
+}
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gds-space-gap-md);
+}
+.title {
+  margin: 0;
+  font: var(--gds-dialog-title-type);
+  letter-spacing: var(--gds-dialog-title-type-letter-spacing);
+}
+.close {
+  display: inline-grid;
+  place-items: center;
+  width: var(--gds-size-control-sm);
+  height: var(--gds-size-control-sm);
+  flex: none;
+  margin: calc(var(--gds-space-inset-xs) * -1) calc(var(--gds-space-inset-xs) * -1) 0 0;
+  border: 0;
+  border-radius: var(--gds-radius-pill);
+  background: transparent;
+  color: var(--gds-color-icon-secondary);
+  cursor: pointer;
+}
+.close:hover {
+  background: var(--gds-color-interactive-subtle-hover);
+  color: var(--gds-color-text-primary);
+}
+.close > :global(svg) {
+  width: var(--gds-size-icon-sm);
+  height: var(--gds-size-icon-sm);
+}
+.description {
+  margin: 0;
+  font: var(--gds-type-text-md);
+  color: var(--gds-color-text-secondary);
+}
+.body {
+  min-width: 0;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--gds-space-gap-sm);
+}

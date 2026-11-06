@@ -1,0 +1,48 @@
+{
+  "name": "@oef/gds-tokens",
+  "version": "0.1.0",
+  "description": "GDS design tokens: W3C DTCG source files and the generated CSS variables, TypeScript constants, Figma variables and Highcharts theme.",
+  "license": "MIT",
+  "author": "Carlos Graffi <carlos.graffi@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Open-Earth-Foundation/gds-ds.git",
+    "directory": "packages/tokens"
+  },
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "tokens",
+    "TOKENS.md"
+  ],
+  "main": "./dist/tokens.js",
+  "types": "./dist/tokens.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "import": "./dist/tokens.js"
+    },
+    "./css": "./dist/variables.css",
+    "./highcharts": {
+      "types": "./dist/highcharts.d.ts",
+      "import": "./dist/highcharts.js"
+    },
+    "./figma": "./dist/figma.variables.json",
+    "./tokens/*": "./tokens/*"
+  },
+  "scripts": {
+    "check": "python3 tools/check.py .",
+    "build": "node build/build.mjs && tsc -p build/tsconfig.json",
+    "lint": "node build/build.mjs --dry-run",
+    "typecheck": "tsc -p build/tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "style-dictionary": "^5.8.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
+  }
+}

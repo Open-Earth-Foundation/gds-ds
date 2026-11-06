@@ -1,0 +1,34 @@
+name: Component proposal
+description: A new component or a new variant of an existing one.
+labels: [component]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g. DateRangePicker
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: What it is for
+      description: The user task, in one paragraph. Which module needs it first.
+    validations:
+      required: true
+  - type: textarea
+    id: existing
+    attributes:
+      label: Why an existing component does not cover it
+    validations:
+      required: true
+  - type: textarea
+    id: anatomy
+    attributes:
+      label: Proposed anatomy, props and states
+      description: Root, parts, data attributes. Which Base UI primitive carries the behavior.
+  - type: textarea
+    id: tokens
+    attributes:
+      label: Tokens
+      description: Which semantic roles it reads. If a role is missing, say which and why.

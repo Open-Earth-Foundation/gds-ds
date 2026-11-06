@@ -1,0 +1,17 @@
+.positioner {
+  z-index: var(--gds-z-popover);
+}
+.root {
+  max-width: calc(var(--gds-size-reading-width) / 2);
+  padding: var(--gds-tooltip-padding-y) var(--gds-tooltip-padding-x);
+  border-radius: var(--gds-tooltip-radius);
+  background: var(--gds-tooltip-bg);
+  color: var(--gds-tooltip-fg);
+  font: var(--gds-tooltip-type);
+  letter-spacing: var(--gds-tooltip-type-letter-spacing);
+  transition: opacity var(--gds-motion-duration-reveal) var(--gds-motion-easing-standard);
+}
+.root[data-starting-style],
+.root[data-ending-style] {
+  opacity: 0;
+}

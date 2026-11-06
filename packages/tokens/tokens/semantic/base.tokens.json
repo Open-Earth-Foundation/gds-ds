@@ -1,0 +1,260 @@
+{
+  "$schema": "https://www.designtokens.org/schemas/2025.10/tokens.json",
+  "$description": "GDS tier 2, mode-independent roles: typography, space, radius, border, elevation, motion. References tier 1 only.",
+  "type": {
+    "$type": "typography",
+    "$description": "Two roles. display: titles and labels read at a glance. text: bodies, legends, descriptions read slowly. numeric: figures in tables and tiles, tabular.",
+    "display": {
+      "xl": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontSize": "{font.size.800}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.tight}",
+          "letterSpacing": "{font.letter-spacing.tight}"
+        },
+        "$description": "Page title on public dashboards"
+      },
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontSize": "{font.size.600}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.tight}",
+          "letterSpacing": "{font.letter-spacing.tight}"
+        },
+        "$description": "Page title"
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontSize": "{font.size.400}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.snug}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Section title"
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontSize": "{font.size.300}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.snug}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Card and panel title"
+      },
+      "xs": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontSize": "{font.size.200}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.snug}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Group title, table header"
+      }
+    },
+    "text": {
+      "lg": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.300}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.relaxed}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Lead paragraph"
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.200}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Body. The default."
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.100}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Secondary text, table cells, chart legends"
+      },
+      "xs": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.50}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Captions, chart axis labels. Minimum size in the system."
+      }
+    },
+    "label": {
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.200}",
+          "fontWeight": "{font.weight.medium}",
+          "lineHeight": "{font.line-height.snug}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Buttons, inputs, tabs"
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.100}",
+          "fontWeight": "{font.weight.medium}",
+          "lineHeight": "{font.line-height.snug}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Badges, small controls"
+      },
+      "overline": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.50}",
+          "fontWeight": "{font.weight.medium}",
+          "lineHeight": "{font.line-height.snug}",
+          "letterSpacing": "{font.letter-spacing.wide}"
+        },
+        "$description": "Uppercase eyebrows and section markers"
+      }
+    },
+    "numeric": {
+      "$description": "Always rendered with font-variant-numeric: tabular-nums. The build adds it to the CSS output of this group.",
+      "xl": {
+        "$value": {
+          "fontFamily": "{font.family.display}",
+          "fontSize": "{font.size.700}",
+          "fontWeight": "{font.weight.semibold}",
+          "lineHeight": "{font.line-height.tight}",
+          "letterSpacing": "{font.letter-spacing.tight}"
+        },
+        "$description": "Key figure tile"
+      },
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.200}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Table figures"
+      },
+      "sm": {
+        "$value": {
+          "fontFamily": "{font.family.text}",
+          "fontSize": "{font.size.100}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        },
+        "$description": "Dense table figures, chart values"
+      }
+    },
+    "code": {
+      "md": {
+        "$value": {
+          "fontFamily": "{font.family.mono}",
+          "fontSize": "{font.size.100}",
+          "fontWeight": "{font.weight.regular}",
+          "lineHeight": "{font.line-height.normal}",
+          "letterSpacing": "{font.letter-spacing.normal}"
+        }
+      }
+    }
+  },
+  "space": {
+    "$type": "dimension",
+    "inset": {
+      "$description": "Padding inside a container.",
+      "xs": { "$value": "{space.1}" },
+      "sm": { "$value": "{space.2}" },
+      "md": { "$value": "{space.4}" },
+      "lg": { "$value": "{space.6}" },
+      "xl": { "$value": "{space.8}" }
+    },
+    "gap": {
+      "$description": "Distance between siblings.",
+      "xs": { "$value": "{space.1}" },
+      "sm": { "$value": "{space.2}" },
+      "md": { "$value": "{space.4}" },
+      "lg": { "$value": "{space.6}" },
+      "xl": { "$value": "{space.10}" }
+    },
+    "section": { "$value": "{space.12}", "$description": "Between page sections" },
+    "gutter": { "$value": "{space.6}", "$description": "Page side margin" }
+  },
+  "size": {
+    "$type": "dimension",
+    "control": {
+      "sm": { "$value": "{size.px.32}" },
+      "md": { "$value": "{size.px.40}" },
+      "lg": { "$value": "{size.px.48}" }
+    },
+    "icon": {
+      "sm": { "$value": "{size.px.16}" },
+      "md": { "$value": "{size.px.20}" },
+      "lg": { "$value": "{size.px.24}" }
+    },
+    "touch-target": { "$value": "{size.px.44}", "$description": "WCAG 2.2 minimum" },
+    "reading-width": {
+      "$value": "{size.rem.42}",
+      "$description": "About 65 characters at body size"
+    },
+    "layout": {
+      "sidebar": { "$value": "{size.px.264}" },
+      "topbar": { "$value": "{size.px.56}" },
+      "content-max": { "$value": "{size.px.1440}" }
+    }
+  },
+  "radius": {
+    "$type": "dimension",
+    "control": { "$value": "{radius.3}", "$description": "Inputs, chips, menu items" },
+    "container": { "$value": "{radius.4}", "$description": "Cards, panels, dialogs" },
+    "overlay": { "$value": "{radius.4}", "$description": "Popovers, toasts" },
+    "pill": { "$value": "{radius.full}" }
+  },
+  "border": {
+    "$type": "dimension",
+    "default": { "$value": "{border.width.1}" },
+    "focus": { "$value": "{border.width.2}" }
+  },
+  "elevation": {
+    "$type": "shadow",
+    "raised": { "$value": "{shadow.1}", "$description": "Cards that lift on hover" },
+    "overlay": { "$value": "{shadow.2}", "$description": "Popovers, menus, toasts" },
+    "modal": { "$value": "{shadow.3}", "$description": "Dialogs, drawers" }
+  },
+  "motion": {
+    "duration": {
+      "$type": "duration",
+      "state": { "$value": "{motion.duration.fast}", "$description": "Hover, focus, pressed" },
+      "reveal": {
+        "$value": "{motion.duration.base}",
+        "$description": "Menus, tooltips, accordions"
+      },
+      "move": {
+        "$value": "{motion.duration.slow}",
+        "$description": "Drawers, dialogs, page transitions"
+      }
+    },
+    "easing": {
+      "$type": "cubicBezier",
+      "standard": { "$value": "{motion.curve.standard}" },
+      "enter": { "$value": "{motion.curve.enter}" },
+      "exit": { "$value": "{motion.curve.exit}" }
+    }
+  }
+}
