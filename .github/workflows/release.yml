@@ -1,8 +1,8 @@
 name: Release
 
 # Opens or updates a "Version packages" pull request from pending changesets; publishes to npm
-# when that pull request is merged. Needs NPM_TOKEN in the repository secrets (an @oef org
-# automation token) before the first publish; until then the job only versions.
+# when that pull request is merged. Publishing is skipped until NPM_TOKEN (an @oef org automation
+# token) exists in the repository secrets; until then the job only versions.
 on:
   push:
     branches: [main]
@@ -32,7 +32,8 @@ jobs:
       - run: pnpm check
       - uses: changesets/action@v1
         with:
-          publish: pnpm release
+          # Publishes only once NPM_TOKEN exists; until then the action only opens the version PR.
+          publish: ${{ secrets.NPM_TOKEN != '' && 'pnpm release' || '' }}
           version: pnpm version-packages
           title: 'Version packages'
           commit: 'Version packages'
