@@ -14,5 +14,6 @@ In the repository, next to the code:
 
 - [`component-conventions.md`](./component-conventions.md): markup, naming, state and the done checklist.
 - [`brand-application.md`](./brand-application.md): what happens when the GCoM brand arrives.
+- [`releasing.md`](./releasing.md): changesets, the Version packages pull request, tags and releases.
 - [`../packages/tokens/TOKENS.md`](../packages/tokens/TOKENS.md): the token rules.
 - Each component's `README.md` under `packages/react/src/components/`.

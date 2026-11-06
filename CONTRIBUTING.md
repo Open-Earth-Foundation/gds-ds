@@ -42,7 +42,7 @@ Then export it from `src/index.ts`. [`docs/component-conventions.md`](./docs/com
 
 ## Commits and releases
 
-Plain messages, present tense, what and why: `Add Switch; raise checkbox box to size.icon.md`. Published packages are versioned together through changesets: `pnpm changeset` in your branch, the release workflow does the rest.
+Plain messages, present tense, what and why: `Add Switch; raise checkbox box to size.icon.md`. Published packages are versioned together through changesets: `pnpm changeset` in your branch, the release workflow does the rest. The whole flow: [`docs/releasing.md`](./docs/releasing.md).
 
 ## Where decisions go
 
