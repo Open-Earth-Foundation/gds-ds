@@ -5,3 +5,8 @@ packages:
 # Dependencies allowed to run postinstall scripts (esbuild downloads its binary).
 onlyBuiltDependencies:
   - esbuild
+
+# Security floors for transitive dependencies flagged by Dependabot (dev-only paths: Storybook tooling).
+overrides:
+  glob: '>=14.0.2'
+  minimatch: '>=11.0.1'
