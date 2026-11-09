@@ -10,6 +10,11 @@ export type { RadioGroupProps, RadioProps } from './components/RadioGroup/RadioG
 export { Switch } from './components/Switch/Switch';
 export type { SwitchProps } from './components/Switch/Switch';
 export { Tabs } from './components/Tabs/Tabs';
+export { SegmentedControl } from './components/SegmentedControl/SegmentedControl';
+export type {
+  SegmentedControlProps,
+  SegmentedControlItemProps,
+} from './components/SegmentedControl/SegmentedControl';
 export { Card } from './components/Card/Card';
 export type { CardProps } from './components/Card/Card';
 export { Badge } from './components/Badge/Badge';

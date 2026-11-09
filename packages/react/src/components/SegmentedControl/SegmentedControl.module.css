@@ -1,0 +1,37 @@
+.root {
+  display: inline-flex;
+  gap: var(--gds-space-gap-xs);
+  padding: var(--gds-space-inset-xs);
+  border: var(--gds-border-default) solid var(--gds-color-border-default);
+  border-radius: var(--gds-radius-pill);
+  background: var(--gds-color-surface-subtle);
+}
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gds-space-gap-xs);
+  height: var(--gds-size-control-sm);
+  padding: 0 var(--gds-space-inset-md);
+  border: 0;
+  border-radius: var(--gds-radius-pill);
+  background: transparent;
+  font: var(--gds-type-label-md);
+  letter-spacing: var(--gds-type-label-md-letter-spacing);
+  color: var(--gds-color-text-secondary);
+  cursor: pointer;
+  transition:
+    background-color var(--gds-motion-duration-state) var(--gds-motion-easing-standard),
+    color var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
+}
+.item:hover {
+  color: var(--gds-color-text-primary);
+}
+/* Selected state is Base UI's data-pressed, kept as is. */
+.item[data-pressed] {
+  background: var(--gds-color-interactive-selected-subtle-bg);
+  color: var(--gds-color-interactive-selected-subtle-fg);
+}
+.item[data-disabled] {
+  color: var(--gds-color-text-disabled);
+  cursor: not-allowed;
+}
