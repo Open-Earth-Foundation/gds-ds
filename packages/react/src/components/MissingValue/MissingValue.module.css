@@ -1,0 +1,16 @@
+.root {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--gds-space-gap-xs);
+  white-space: nowrap;
+}
+.dash {
+  color: var(--gds-color-text-tertiary);
+}
+/* The word carries the meaning, so it uses text.secondary (essential text, 4.5:1), not tertiary. */
+.label {
+  font: var(--gds-type-text-sm);
+  letter-spacing: var(--gds-type-text-sm-letter-spacing);
+  font-style: italic;
+  color: var(--gds-color-text-secondary);
+}

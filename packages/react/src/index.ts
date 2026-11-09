@@ -21,6 +21,8 @@ export { Table } from './components/Table/Table';
 export { Tooltip, TooltipProvider } from './components/Tooltip/Tooltip';
 export type { TooltipProps } from './components/Tooltip/Tooltip';
 export { KeyFigure } from './components/KeyFigure/KeyFigure';
+export { MissingValue } from './components/MissingValue/MissingValue';
+export type { MissingValueProps, MissingReason } from './components/MissingValue/MissingValue';
 export type { KeyFigureProps } from './components/KeyFigure/KeyFigure';
 export { AppShell } from './components/AppShell/AppShell';
 export * from './icons';
