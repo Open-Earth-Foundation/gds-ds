@@ -1,6 +1,6 @@
 {
   "name": "@open-earth-foundation/gds-tokens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "GDS design tokens: W3C DTCG source files and the generated CSS variables, TypeScript constants, Figma variables and Highcharts theme.",
   "license": "MIT",
   "author": "Carlos Graffi <carlos.graffi@gmail.com>",
