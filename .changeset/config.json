@@ -3,9 +3,15 @@
   "changelog": "@changesets/cli/changelog",
   "commit": false,
   "fixed": [],
-  "linked": [["@oef/gds-tokens", "@oef/gds-react", "@oef/gds-charts"]],
-  "access": "public",
+  "linked": [
+    [
+      "@open-earth-foundation/gds-tokens",
+      "@open-earth-foundation/gds-react",
+      "@open-earth-foundation/gds-charts"
+    ]
+  ],
+  "access": "restricted",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@oef/stylelint-plugin-gds"]
+  "ignore": ["@open-earth-foundation/stylelint-plugin-gds"]
 }

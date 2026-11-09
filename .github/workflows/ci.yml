@@ -40,7 +40,7 @@ jobs:
       - run: pnpm format:check
 
       - name: Build Storybook
-        run: pnpm --filter @oef/gds-react build-storybook --quiet
+        run: pnpm --filter @open-earth-foundation/gds-react build-storybook --quiet
 
       - uses: actions/upload-artifact@v4
         with:

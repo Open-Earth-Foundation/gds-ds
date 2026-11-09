@@ -1,11 +1,11 @@
-# @oef/gds-react
+# @open-earth-foundation/gds-react
 
-React components for the GCoM Digital Service. Behavior from [Base UI](https://base-ui.com), every visual value from `@oef/gds-tokens` through CSS Modules.
+React components for the GCoM Digital Service. Behavior from [Base UI](https://base-ui.com), every visual value from `@open-earth-foundation/gds-tokens` through CSS Modules.
 
 ```tsx
-import '@oef/gds-tokens/css';
-import '@oef/gds-react/styles.css';
-import { AppShell, Button, TextField, Table } from '@oef/gds-react';
+import '@open-earth-foundation/gds-tokens/css';
+import '@open-earth-foundation/gds-react/styles.css';
+import { AppShell, Button, TextField, Table } from '@open-earth-foundation/gds-react';
 ```
 
 ## Components

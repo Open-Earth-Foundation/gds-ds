@@ -1,5 +1,5 @@
 {
-  "name": "@oef/gds-tokens",
+  "name": "@open-earth-foundation/gds-tokens",
   "version": "0.1.0",
   "description": "GDS design tokens: W3C DTCG source files and the generated CSS variables, TypeScript constants, Figma variables and Highcharts theme.",
   "license": "MIT",
@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/Open-Earth-Foundation/gds-ds.git",
     "directory": "packages/tokens"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "type": "module",
   "sideEffects": [

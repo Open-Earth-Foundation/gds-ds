@@ -1,5 +1,5 @@
 {
-  "name": "@oef/gds-react",
+  "name": "@open-earth-foundation/gds-react",
   "version": "0.1.0",
   "description": "GDS React components: Base UI behavior, CSS Modules on GDS tokens.",
   "license": "MIT",
@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/Open-Earth-Foundation/gds-ds.git",
     "directory": "packages/react"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "type": "module",
   "sideEffects": [
@@ -39,10 +43,10 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
-    "@oef/gds-tokens": "workspace:*"
+    "@open-earth-foundation/gds-tokens": "workspace:*"
   },
   "devDependencies": {
-    "@oef/stylelint-plugin-gds": "workspace:*",
+    "@open-earth-foundation/stylelint-plugin-gds": "workspace:*",
     "@storybook/react-vite": "^10.6.6",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",

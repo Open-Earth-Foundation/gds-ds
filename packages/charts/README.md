@@ -1,4 +1,4 @@
-# @oef/gds-charts
+# @open-earth-foundation/gds-charts
 
 The chart layer of GDS: the Highcharts theme generated from the `chart.*` tokens, plus the few conventions every chart in the service follows.
 
@@ -9,7 +9,7 @@ import {
   seriesColor,
   estimatedSeriesOptions,
   referenceLine,
-} from '@oef/gds-charts';
+} from '@open-earth-foundation/gds-charts';
 
 Highcharts.setOptions(highchartsTheme('light'));
 ```

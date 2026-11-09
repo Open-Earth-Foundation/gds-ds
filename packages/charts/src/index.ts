@@ -1,6 +1,6 @@
-// @oef/gds-charts. The Highcharts theme is generated in @oef/gds-tokens; this package adds the
+// @open-earth-foundation/gds-charts. The Highcharts theme is generated in @open-earth-foundation/gds-tokens; this package adds the
 // conventions every chart in the service follows (principle 6: absence of data is visible).
-import { highchartsTheme, highchartsLight } from '@oef/gds-tokens/highcharts';
+import { highchartsTheme, highchartsLight } from '@open-earth-foundation/gds-tokens/highcharts';
 
 export { highchartsTheme };
 export type GdsHighchartsTheme = typeof highchartsLight;

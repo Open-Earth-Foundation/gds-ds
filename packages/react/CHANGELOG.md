@@ -1,4 +1,4 @@
-# @oef/gds-react
+# @open-earth-foundation/gds-react
 
 ## 0.1.0
 

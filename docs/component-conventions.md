@@ -1,6 +1,6 @@
 # Component conventions
 
-Every component in `@oef/gds-react` follows the same shape, so a reader of the DOM, the stylesheet or the Figma file sees the same names.
+Every component in `@open-earth-foundation/gds-react` follows the same shape, so a reader of the DOM, the stylesheet or the Figma file sees the same names.
 
 ## Behavior from Base UI, looks from tokens
 

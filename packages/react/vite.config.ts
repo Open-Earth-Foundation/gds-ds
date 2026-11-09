@@ -28,7 +28,12 @@ export default defineConfig({
       cssFileName: 'gds-react',
     },
     rollupOptions: {
-      external: [/^react($|\/)/, /^react-dom($|\/)/, /^@base-ui\/react/, /^@oef\/gds-tokens/],
+      external: [
+        /^react($|\/)/,
+        /^react-dom($|\/)/,
+        /^@base-ui\/react/,
+        /^@open-earth-foundation\/gds-tokens/,
+      ],
     },
     sourcemap: true,
   },

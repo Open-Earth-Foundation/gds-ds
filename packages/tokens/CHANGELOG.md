@@ -1,4 +1,4 @@
-# @oef/gds-tokens
+# @open-earth-foundation/gds-tokens
 
 ## 0.1.0
 
