@@ -1,4 +1,4 @@
-# @oef/gds-tokens
+# @open-earth-foundation/gds-tokens
 
 The design tokens of the GCoM Digital Service design system (GDS). The source of truth is the W3C Design Tokens (DTCG 2025.10) files in `tokens/`; everything else is generated.
 
@@ -15,13 +15,13 @@ The rules for these files, including naming, tiers, ramps and how to change a to
 
 ## Outputs
 
-| Import                       | What                                                                                                                                                                     |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `@oef/gds-tokens/css`        | `variables.css`: every token as `--gds-*`. Light in `:root`; dark under `:root[data-theme="dark"]` and `prefers-color-scheme: dark` (opt out with `data-theme="light"`). |
-| `@oef/gds-tokens`            | `light`, `dark`, `tokens`, `paths`, and `cssVar('color.surface.base')` → `var(--gds-color-surface-base)`. Typed: `TokenPath` is a union of every path.                   |
-| `@oef/gds-tokens/highcharts` | `highchartsTheme(mode)`: a Highcharts options object built from the `chart.*` tokens.                                                                                    |
-| `@oef/gds-tokens/figma`      | `figma.variables.json`: three collections (Primitives with light/dark modes, Semantic aliasing Primitives, Component aliasing Semantic) plus composite styles.           |
-| `@oef/gds-tokens/tokens/*`   | The raw source files.                                                                                                                                                    |
+| Import                                         | What                                                                                                                                                                     |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `@open-earth-foundation/gds-tokens/css`        | `variables.css`: every token as `--gds-*`. Light in `:root`; dark under `:root[data-theme="dark"]` and `prefers-color-scheme: dark` (opt out with `data-theme="light"`). |
+| `@open-earth-foundation/gds-tokens`            | `light`, `dark`, `tokens`, `paths`, and `cssVar('color.surface.base')` → `var(--gds-color-surface-base)`. Typed: `TokenPath` is a union of every path.                   |
+| `@open-earth-foundation/gds-tokens/highcharts` | `highchartsTheme(mode)`: a Highcharts options object built from the `chart.*` tokens.                                                                                    |
+| `@open-earth-foundation/gds-tokens/figma`      | `figma.variables.json`: three collections (Primitives with light/dark modes, Semantic aliasing Primitives, Component aliasing Semantic) plus composite styles.           |
+| `@open-earth-foundation/gds-tokens/tokens/*`   | The raw source files.                                                                                                                                                    |
 
 Typography tokens become one shorthand and five longhands: `--gds-type-text-md` (for `font:`) plus `-font-family`, `-font-size`, `-font-weight`, `-line-height`, `-letter-spacing`.
 

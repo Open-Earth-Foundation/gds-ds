@@ -1,4 +1,4 @@
-# @oef/gds-charts
+# @open-earth-foundation/gds-charts
 
 ## 0.1.0
 

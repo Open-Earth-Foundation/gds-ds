@@ -1,4 +1,4 @@
-// @oef/stylelint-plugin-gds
+// @open-earth-foundation/stylelint-plugin-gds
 //
 // gds/no-raw-values: in component stylesheets every color and every length comes from a token.
 // This is the enforcement of TOKENS.md section 8 ("anyone can create an alias, nobody can create a value")

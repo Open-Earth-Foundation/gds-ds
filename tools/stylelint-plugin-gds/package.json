@@ -1,5 +1,5 @@
 {
-  "name": "@oef/stylelint-plugin-gds",
+  "name": "@open-earth-foundation/stylelint-plugin-gds",
   "version": "0.1.0",
   "private": true,
   "description": "Stylelint rules that enforce the GDS token rules in component stylesheets: no raw values, only --gds- variables.",

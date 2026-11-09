@@ -4,23 +4,25 @@ One token source, one set of components in code (and in Figma from the same file
 
 v1 is due 18 December 2026. This repository holds v0.1: the token rules and files, the build that turns them into CSS, TypeScript, Figma variables and a Highcharts theme, the first components on [Base UI](https://base-ui.com) with CSS Modules, and the checks that keep all of it honest.
 
-| Package                                                     | What                                                                                                                               | Import                                                                                          |
-| ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [`@oef/gds-tokens`](./packages/tokens)                      | DTCG token files, rules, checker, generated outputs                                                                                | `@oef/gds-tokens`, `@oef/gds-tokens/css`, `@oef/gds-tokens/highcharts`, `@oef/gds-tokens/figma` |
-| [`@oef/gds-react`](./packages/react)                        | Components: Button, TextField, Checkbox, RadioGroup, Switch, Tabs, Card, Badge, Alert, Dialog, Table, Tooltip, KeyFigure, AppShell | `@oef/gds-react`, `@oef/gds-react/styles.css`                                                   |
-| [`@oef/gds-charts`](./packages/charts)                      | Highcharts theme and the conventions every chart follows                                                                           | `@oef/gds-charts`                                                                               |
-| [`@oef/stylelint-plugin-gds`](./tools/stylelint-plugin-gds) | The lint rule that rejects raw values in component styles (private)                                                                |                                                                                                 |
+| Package                                                                       | What                                                                                                                               | Import                                                                                                                                                                  |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`@open-earth-foundation/gds-tokens`](./packages/tokens)                      | DTCG token files, rules, checker, generated outputs                                                                                | `@open-earth-foundation/gds-tokens`, `@open-earth-foundation/gds-tokens/css`, `@open-earth-foundation/gds-tokens/highcharts`, `@open-earth-foundation/gds-tokens/figma` |
+| [`@open-earth-foundation/gds-react`](./packages/react)                        | Components: Button, TextField, Checkbox, RadioGroup, Switch, Tabs, Card, Badge, Alert, Dialog, Table, Tooltip, KeyFigure, AppShell | `@open-earth-foundation/gds-react`, `@open-earth-foundation/gds-react/styles.css`                                                                                       |
+| [`@open-earth-foundation/gds-charts`](./packages/charts)                      | Highcharts theme and the conventions every chart follows                                                                           | `@open-earth-foundation/gds-charts`                                                                                                                                     |
+| [`@open-earth-foundation/stylelint-plugin-gds`](./tools/stylelint-plugin-gds) | The lint rule that rejects raw values in component styles (private)                                                                |                                                                                                                                                                         |
 
 ## Use it in an app
 
+Packages are on GitHub Packages, private to the OEF organisation. Once your repo has the `.npmrc` lines from [`docs/releasing.md`](./docs/releasing.md):
+
 ```bash
-pnpm add @oef/gds-tokens @oef/gds-react
+pnpm add @open-earth-foundation/gds-tokens @open-earth-foundation/gds-react
 ```
 
 ```tsx
-import '@oef/gds-tokens/css'; // --gds-* variables, light and dark
-import '@oef/gds-react/styles.css'; // component styles
-import { Button, TextField } from '@oef/gds-react';
+import '@open-earth-foundation/gds-tokens/css'; // --gds-* variables, light and dark
+import '@open-earth-foundation/gds-react/styles.css'; // component styles
+import { Button, TextField } from '@open-earth-foundation/gds-react';
 ```
 
 Dark mode follows `prefers-color-scheme`; set `data-theme="dark"` or `"light"` on `<html>` to force one.

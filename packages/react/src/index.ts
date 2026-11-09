@@ -1,4 +1,4 @@
-// @oef/gds-react. Import '@oef/gds-tokens/css' and '@oef/gds-react/styles.css' once in the app.
+// @open-earth-foundation/gds-react. Import '@open-earth-foundation/gds-tokens/css' and '@open-earth-foundation/gds-react/styles.css' once in the app.
 export { Button } from './components/Button/Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './components/Button/Button';
 export { TextField } from './components/TextField/TextField';

@@ -1,5 +1,5 @@
 export default {
-  plugins: ['@oef/stylelint-plugin-gds'],
+  plugins: ['@open-earth-foundation/stylelint-plugin-gds'],
   rules: {
     'gds/no-raw-values': [
       true,

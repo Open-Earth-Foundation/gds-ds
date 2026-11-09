@@ -1,4 +1,4 @@
-/* GDS base: the few global rules components rely on. Import once after @oef/gds-tokens/css. */
+/* GDS base: the few global rules components rely on. Import once after @open-earth-foundation/gds-tokens/css. */
 
 :where(:root) {
   font: var(--gds-type-text-md);

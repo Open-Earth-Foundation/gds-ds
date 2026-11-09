@@ -1,5 +1,5 @@
 import type { Preview } from '@storybook/react-vite';
-import '@oef/gds-tokens/css';
+import '@open-earth-foundation/gds-tokens/css';
 import '../src/styles/base.css';
 
 const preview: Preview = {

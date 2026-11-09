@@ -33,9 +33,16 @@ Rename or removal is a two-step change (TOKENS.md section 7): mark the old path 
 
 ## Where consumers get the packages
 
-To confirm with Pablo (decision log, "Packaging"). Options:
+GitHub Packages, private to the OEF organisation (decided 9 Nov 2026, Milan and Pablo). The release workflow publishes with its own `GITHUB_TOKEN`; no secret to manage. Package names carry the org as scope: `@open-earth-foundation/gds-tokens`, `@open-earth-foundation/gds-react`, `@open-earth-foundation/gds-charts`.
 
-- **GitHub Packages**, private to the OEF org, no extra secret (the workflow's own `GITHUB_TOKEN` publishes). Requires the scope to match the org: `@open-earth-foundation/gds-tokens`.
-- **npm**, public under `@oef` (needs the scope claimed on npmjs.com and an automation token in the `NPM_TOKEN` secret) or private (paid npm org plan).
+To install in the Digital Service (or any OEF repo):
 
-Until one is configured, the packages exist only as this repository: the Digital Service can depend on them through the workspace (same monorepo) or a git dependency, and the generated outputs are attached to each GitHub release.
+1. `.npmrc` in the consuming repo:
+   ```
+   @open-earth-foundation:registry=https://npm.pkg.github.com
+   //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+   ```
+2. Locally, `GITHUB_TOKEN` is a personal access token with `read:packages` (classic) or a fine-grained token with package read on the org. In GitHub Actions the workflow's own `GITHUB_TOKEN` works once the workflow has `packages: read`.
+3. `pnpm add @open-earth-foundation/gds-tokens @open-earth-foundation/gds-react`.
+
+Each version is also attached to its GitHub release as a zip of the generated outputs, for designers and anyone without a package manager.
