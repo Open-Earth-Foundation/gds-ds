@@ -20,4 +20,4 @@ Rows of records. Semantic HTML with the GDS classes; behavior (sorting, selectio
 
 `table.header.*`, `table.row.*`, `table.cell.*`, `table.empty.fg`.
 
-Numbers are right-aligned and tabular. Missing values show as "—" with a word next to them (not estimated, pending), never blank (principle 6).
+Numbers are right-aligned and tabular. Missing values show as "—" with a word next to them (not estimated, pending), never blank (principle 10): use `<MissingValue reason="…" />` in the cell.
