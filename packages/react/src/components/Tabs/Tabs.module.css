@@ -17,6 +17,7 @@
   background: none;
   font: var(--gds-tabs-type);
   letter-spacing: var(--gds-tabs-type-letter-spacing);
+  white-space: nowrap;
   color: var(--gds-tabs-fg);
   cursor: pointer;
   transition: color var(--gds-motion-duration-state) var(--gds-motion-easing-standard);
