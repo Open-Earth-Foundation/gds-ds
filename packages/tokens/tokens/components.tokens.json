@@ -30,7 +30,13 @@
       "md": { "$type": "dimension", "$value": "{size.control.md}" },
       "lg": { "$type": "dimension", "$value": "{size.control.lg}" }
     },
-    "padding-x": { "$type": "dimension", "$value": "{space.inset.md}" },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.inset.lg}",
+      "$description": "The md size. One step per size, like height, and never less than half the height, so the label clears the pill's curve"
+    },
+    "padding-x-sm": { "$type": "dimension", "$value": "{space.inset.md}" },
+    "padding-x-lg": { "$type": "dimension", "$value": "{space.inset.xl}" },
     "type": { "$type": "typography", "$value": "{type.label.md}" }
   },
   "input": {
@@ -46,11 +52,15 @@
     "error-fg": { "$type": "color", "$value": "{color.status.critical.fg}" },
     "radius": {
       "$type": "dimension",
-      "$value": "{radius.pill}",
+      "$value": "{radius.control}",
       "$description": "Buttons are pills; inputs keep radius.control"
     },
     "height": { "$type": "dimension", "$value": "{size.control.md}" },
-    "padding-x": { "$type": "dimension", "$value": "{space.inset.sm}" },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.inset.md}",
+      "$description": "Both sides of the box, so the text and a suffix sit the same distance from the border"
+    },
     "type": { "$type": "typography", "$value": "{type.text.md}" }
   },
   "table": {

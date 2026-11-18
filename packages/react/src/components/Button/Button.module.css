@@ -3,8 +3,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--gds-space-gap-xs);
+  max-width: 100%;
   height: var(--gds-button-height-md);
-  padding: 0 var(--gds-space-inset-lg);
+  padding: 0 var(--gds-button-padding-x);
   border: var(--gds-border-default) solid transparent;
   border-radius: var(--gds-button-radius);
   font: var(--gds-button-type);
@@ -32,12 +33,12 @@
 
 .root[data-size='sm'] {
   height: var(--gds-button-height-sm);
-  padding: 0 var(--gds-space-inset-md);
+  padding: 0 var(--gds-button-padding-x-sm);
   font-size: var(--gds-type-label-sm-font-size);
 }
 .root[data-size='lg'] {
   height: var(--gds-button-height-lg);
-  padding: 0 var(--gds-space-inset-xl);
+  padding: 0 var(--gds-button-padding-x-lg);
   font-size: var(--gds-type-text-lg-font-size);
 }
 
@@ -102,6 +103,14 @@
   width: 100%;
   height: 100%;
 }
+/* A label is always one line. Half the reading width is about 40 characters at label size: the label
+   never runs past that, and in a space too narrow for it, it ends in an ellipsis instead of wrapping
+   or pushing out of the button. */
 .label {
   display: inline-block;
+  min-width: 0;
+  max-width: calc(var(--gds-size-reading-width) / 2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: var(--gds-button-type-line-height);
 }

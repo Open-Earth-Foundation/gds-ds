@@ -2,6 +2,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--gds-space-gap-xs);
+  max-width: 100%;
   height: var(--gds-size-icon-lg);
   padding: 0 var(--gds-badge-padding-x);
   border-radius: var(--gds-badge-radius);
@@ -11,13 +12,22 @@
   white-space: nowrap;
 }
 .dot {
+  flex: none;
   width: calc(var(--gds-size-icon-sm) / 2);
   height: calc(var(--gds-size-icon-sm) / 2);
   border-radius: var(--gds-radius-pill);
   background: currentColor;
 }
+/* A label is always one line. Half the reading width is about 40 characters at label size: the label
+   never runs past that, and in a space too narrow for it, it ends in an ellipsis instead of wrapping
+   or pushing out of the badge. */
 .label {
   display: inline-block;
+  min-width: 0;
+  max-width: calc(var(--gds-size-reading-width) / 2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: var(--gds-badge-type-line-height);
 }
 
 .root[data-kind='good'] {

@@ -21,7 +21,7 @@ State lives on the field root, not on the input, so every part can react to it (
 
 ## Tokens
 
-`input.*` for the box, `input.help-fg` / `input.error-fg` for the messages, `type.label.md` for the label.
+`input.*` for the box (`input.radius` is `radius.control`: buttons are pills, fields are not; `input.padding-x` is the inset on both sides), `input.help-fg` / `input.error-fg` for the messages, `type.label.md` for the label.
 
 ## Do and don't
 

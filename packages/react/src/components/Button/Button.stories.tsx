@@ -25,6 +25,15 @@ export const WithIcon: Story = { args: { iconStart: <CheckIcon />, children: 'Su
 export const IconOnly: Story = {
   args: { iconOnly: true, 'aria-label': 'Close', children: <CloseIcon /> },
 };
+/** A label is always one line. Where the space is too narrow it ends in an ellipsis; it never wraps. */
+export const LongLabel: Story = {
+  args: { children: 'Download the consolidated inventory' },
+  render: (args) => (
+    <div style={{ width: 'calc(var(--gds-size-reading-width) / 4)' }}>
+      <Button {...args} />
+    </div>
+  ),
+};
 export const Sizes: Story = {
   render: (args) => (
     <div style={{ display: 'flex', gap: 'var(--gds-space-gap-sm)', alignItems: 'center' }}>
