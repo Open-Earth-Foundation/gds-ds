@@ -1,5 +1,12 @@
 # @open-earth-foundation/gds-charts
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies [bacab9a]
+  - @open-earth-foundation/gds-tokens@0.1.2
+
 ## 0.1.1
 
 ### Patch Changes

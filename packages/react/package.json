@@ -1,6 +1,6 @@
 {
   "name": "@open-earth-foundation/gds-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GDS React components: Base UI behavior, CSS Modules on GDS tokens.",
   "license": "MIT",
   "author": "Carlos Graffi <carlos.graffi@gmail.com>",

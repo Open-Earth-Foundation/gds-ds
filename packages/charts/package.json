@@ -1,6 +1,6 @@
 {
   "name": "@open-earth-foundation/gds-charts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GDS chart theme for Highcharts, built from the chart.* tokens, with the helpers modules share.",
   "license": "MIT",
   "author": "Carlos Graffi <carlos.graffi@gmail.com>",
