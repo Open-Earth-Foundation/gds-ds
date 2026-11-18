@@ -18,7 +18,10 @@ export const scopedName = (name: string, filename: string): string => {
 };
 
 export default defineConfig({
-  plugins: [react(), dts({ include: ['src'], exclude: ['**/*.test.*', '**/*.stories.*'] })],
+  plugins: [
+    react(),
+    dts({ include: ['src'], exclude: ['**/*.test.*', '**/*.stories.*', 'src/docs/**'] }),
+  ],
   css: { modules: { generateScopedName: scopedName, localsConvention: 'camelCaseOnly' } },
   build: {
     lib: {

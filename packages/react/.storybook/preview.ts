@@ -16,6 +16,21 @@ const preview: Preview = {
       return Story();
     },
   ],
-  parameters: { layout: 'centered' },
+  parameters: {
+    layout: 'centered',
+    options: {
+      storySort: {
+        order: [
+          'Overview',
+          ['Welcome', 'Architecture'],
+          'Tokens',
+          ['Colour', 'Type', 'Space and shape'],
+          'Core',
+          'Data',
+          'Shell',
+        ],
+      },
+    },
+  },
 };
 export default preview;

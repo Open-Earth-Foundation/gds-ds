@@ -2,6 +2,8 @@
 
 One token source, one set of components in code (and in Figma from the same file), built so that every module of the Digital Service reads as one service and so that the GCoM brand lands as a change of values, not a redesign.
 
+**See it:** [open-earth-foundation.github.io/gds-ds](https://open-earth-foundation.github.io/gds-ds/) has the overview, the architecture, the tokens and every component with its variants and states, in light and dark. It is this repository's Storybook, published from `main`.
+
 v1 is due 18 December 2026. This repository holds v0.1: the token rules and files, the build that turns them into CSS, TypeScript, Figma variables and a Highcharts theme, the first components on [Base UI](https://base-ui.com) with CSS Modules, and the checks that keep all of it honest.
 
 | Package                                                                       | What                                                                                                                               | Import                                                                                                                                                                  |
