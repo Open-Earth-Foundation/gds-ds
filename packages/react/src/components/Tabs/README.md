@@ -33,4 +33,7 @@ The selected state is Base UI's `data-active`, kept as is rather than renamed.
 
 `tabs.fg`, `tabs.fg-active`, `tabs.indicator`, `tabs.border`, `tabs.type`.
 
-Tabs are for views of the same thing; for navigation between pages use the side nav.
+## Do and don't
+
+- A tab's label is three words at most and always one line: "Stationary energy", not "Stationary energy and buildings". It never wraps.
+- Tabs are for views of the same thing; for navigation between pages use the side nav.

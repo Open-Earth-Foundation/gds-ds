@@ -15,7 +15,7 @@
   align-items: center;
   gap: var(--gds-space-gap-xs);
   height: var(--gds-input-height);
-  padding: 0 var(--gds-input-padding-x) 0 var(--gds-space-inset-md);
+  padding: 0 var(--gds-input-padding-x);
   border: var(--gds-border-default) solid var(--gds-input-border);
   border-radius: var(--gds-input-radius);
   background: var(--gds-input-bg);

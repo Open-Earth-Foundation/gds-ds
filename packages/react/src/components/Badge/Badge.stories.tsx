@@ -44,3 +44,12 @@ export const AllKinds: Story = {
     </div>
   ),
 };
+/** A label is always one line. Where the space is too narrow it ends in an ellipsis; it never wraps. */
+export const LongLabel: Story = {
+  args: { children: 'Waiting for the data owner to confirm' },
+  render: (args) => (
+    <div style={{ width: 'calc(var(--gds-size-reading-width) / 4)' }}>
+      <Badge {...args} />
+    </div>
+  ),
+};

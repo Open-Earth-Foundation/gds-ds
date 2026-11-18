@@ -16,6 +16,10 @@ span.gds-badge[data-kind][data-variant]
 
 ## Tokens
 
-`badge.<kind>.bg` / `.fg`, `badge.radius`, `badge.padding-x`, `badge.type`; `ai` reads `ai-marker.*`; solid reads `color.status.<kind>.solid`.
+`badge.<kind>.bg` / `.fg`, `badge.radius`, `badge.padding-x`, `badge.type`; `ai` reads `ai-marker.*`; solid reads `color.status.<kind>.solid`. The label's line is capped at half of `size.reading-width`.
+
+## Do and don't
+
+- A label is one line, 40 characters at most, and shorter is better: a badge is a status word, not a sentence. It never wraps. If the space is still too narrow, the label ends in an ellipsis rather than pushing out of the badge.
 
 The word carries the meaning. `ai` marks content a model proposed and a person has not confirmed (principle 9).
