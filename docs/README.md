@@ -10,6 +10,8 @@ The design thinking lives outside the repository so designers and partners can r
 | Decision log         | Dated decisions, structure, plan, open questions         | https://app.notion.com/p/40ceb557728b8163be19fb3472bd19a0 |
 | Compendium           | Everything linked                                        | https://claude.ai/artifact/VKoUYR4mszTj4XDE1Z4B7s         |
 
+The published site, https://open-earth-foundation.github.io/gds-ds/, is this repository's Storybook: the Overview and Tokens pages are in `packages/react/src/docs/` and read the token files, so they follow every change. `.github/workflows/pages.yml` publishes it on every push to `main`.
+
 In the repository, next to the code:
 
 - [`component-conventions.md`](./component-conventions.md): markup, naming, state and the done checklist.

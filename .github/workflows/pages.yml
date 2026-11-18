@@ -1,0 +1,62 @@
+name: Site
+
+# Publishes Storybook (overview, architecture, tokens, every component) to GitHub Pages:
+# https://open-earth-foundation.github.io/gds-ds/
+# Needs Settings → Pages → Source set to "GitHub Actions", once.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build the site
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pnpm install --frozen-lockfile
+
+      # The components read the generated token outputs, so the packages are built first.
+      - run: pnpm check
+      - run: pnpm build
+
+      - name: Build Storybook
+        run: pnpm --filter @open-earth-foundation/gds-react build-storybook --quiet
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: packages/react/storybook-static
+
+  deploy:
+    name: Publish to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

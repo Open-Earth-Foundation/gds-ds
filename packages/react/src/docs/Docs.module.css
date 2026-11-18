@@ -1,0 +1,205 @@
+/* The showcase pages in Storybook (Overview, Tokens). Tokens only, like every component stylesheet. */
+.root {
+  display: grid;
+  gap: var(--gds-space-section);
+  max-width: var(--gds-size-layout-content-max);
+  margin: 0 auto;
+  padding: var(--gds-space-section) var(--gds-space-gutter);
+  color: var(--gds-color-text-primary);
+}
+.hero {
+  display: grid;
+  gap: var(--gds-space-gap-md);
+  max-width: var(--gds-size-reading-width);
+}
+.eyebrow {
+  margin: 0;
+  font: var(--gds-type-label-overline);
+  letter-spacing: var(--gds-type-label-overline-letter-spacing);
+  text-transform: uppercase;
+  color: var(--gds-color-text-secondary);
+}
+.title {
+  margin: 0;
+  font: var(--gds-type-display-xl);
+  letter-spacing: var(--gds-type-display-xl-letter-spacing);
+}
+.lede {
+  margin: 0;
+  font: var(--gds-type-text-lg);
+  color: var(--gds-color-text-secondary);
+}
+.section {
+  display: grid;
+  gap: var(--gds-space-gap-md);
+}
+.heading {
+  margin: 0;
+  font: var(--gds-type-display-sm);
+  letter-spacing: var(--gds-type-display-sm-letter-spacing);
+}
+.subheading {
+  margin: 0;
+  font: var(--gds-type-display-xs);
+  letter-spacing: var(--gds-type-display-xs-letter-spacing);
+}
+.text {
+  margin: 0;
+  max-width: var(--gds-size-reading-width);
+  font: var(--gds-type-text-md);
+  color: var(--gds-color-text-secondary);
+}
+.text strong {
+  color: var(--gds-color-text-primary);
+}
+.link {
+  color: var(--gds-color-text-link);
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gds-space-gap-sm);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--gds-size-layout-sidebar), 1fr));
+  gap: var(--gds-space-gap-md);
+}
+.code {
+  font: var(--gds-type-code-md);
+  color: var(--gds-color-text-primary);
+}
+.pre {
+  margin: 0;
+  padding: var(--gds-space-inset-md);
+  overflow-x: auto;
+  border: var(--gds-border-default) solid var(--gds-color-border-subtle);
+  border-radius: var(--gds-radius-container);
+  background: var(--gds-color-surface-subtle);
+  font: var(--gds-type-code-md);
+}
+.list {
+  display: grid;
+  gap: var(--gds-space-gap-sm);
+  margin: 0;
+  padding: 0 0 0 var(--gds-space-inset-lg);
+  max-width: var(--gds-size-reading-width);
+  font: var(--gds-type-text-md);
+  color: var(--gds-color-text-secondary);
+}
+
+/* A row of boxes joined by arrows: tiers, packages, the release flow. */
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--gds-space-gap-sm);
+}
+.step {
+  display: grid;
+  align-content: start;
+  gap: var(--gds-space-gap-xs);
+  flex: 1;
+  min-width: calc(var(--gds-size-layout-sidebar) / 2);
+  padding: var(--gds-space-inset-md);
+  border: var(--gds-border-default) solid var(--gds-color-border-default);
+  border-radius: var(--gds-radius-container);
+  background: var(--gds-color-surface-subtle);
+}
+.stepName {
+  margin: 0;
+  font: var(--gds-type-label-md);
+}
+.stepText {
+  margin: 0;
+  font: var(--gds-type-text-sm);
+  color: var(--gds-color-text-secondary);
+}
+.arrow {
+  align-self: center;
+  font: var(--gds-type-label-md);
+  color: var(--gds-color-text-tertiary);
+}
+
+/* Colour roles. */
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--gds-size-layout-sidebar), 1fr));
+  gap: var(--gds-space-gap-md);
+}
+.swatch {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--gds-space-gap-sm);
+}
+.chip {
+  width: var(--gds-size-control-lg);
+  height: var(--gds-size-control-lg);
+  border: var(--gds-border-default) solid var(--gds-color-border-subtle);
+  border-radius: var(--gds-radius-control);
+}
+.meta {
+  display: grid;
+  min-width: 0;
+}
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--gds-type-label-sm);
+}
+.value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: var(--gds-type-code-md);
+  font-size: var(--gds-type-text-xs-font-size);
+  color: var(--gds-color-text-tertiary);
+}
+.ramp {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  overflow: hidden;
+  border: var(--gds-border-default) solid var(--gds-color-border-subtle);
+  border-radius: var(--gds-radius-control);
+}
+.rampCell {
+  height: var(--gds-size-control-md);
+}
+
+/* Type, space and shape rows: the name on the left, the thing itself on the right. */
+.rows {
+  display: grid;
+  gap: var(--gds-space-gap-md);
+}
+.row {
+  display: grid;
+  grid-template-columns: var(--gds-size-layout-sidebar) 1fr;
+  align-items: center;
+  gap: var(--gds-space-gap-md);
+  padding-bottom: var(--gds-space-gap-md);
+  border-bottom: var(--gds-border-default) solid var(--gds-color-border-subtle);
+}
+.sample {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bar {
+  height: var(--gds-size-icon-sm);
+  background: var(--gds-color-interactive-default);
+}
+.box {
+  width: var(--gds-size-control-lg);
+  height: var(--gds-size-control-lg);
+  border: var(--gds-border-default) solid var(--gds-color-border-strong);
+  background: var(--gds-color-surface-subtle);
+}
+
+@media (max-width: 48rem) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
